@@ -1,0 +1,49 @@
+---
+# TASK
+
+- name: Create a virtual machine from a template - "{{ vm_name }}"
+  vmware_guest:
+    hostname: "{{ vcenter_server }}"
+    username: "{{ vcenter_admin }}"
+    password: "{{ vcenter_pass }}"
+    validate_certs: no
+    folder: "{{ vm_folder }}"
+    name: "{{ vm_name }}"
+    state: poweredon
+    template: "{{ vm_template }}"
+    datacenter: "{{ datacenter }}"
+    cluster: "{{ cluster }}"
+    hardware:
+      hotadd_cpu: True
+      hotremove_cpu: True
+      hotadd_memory: True
+    networks:
+    - name: "{{ vm_network }}"
+    customization_spec: "{{ custom_spec }}"
+    customvalues:
+    #   - key: vm.owner
+    #     value: "{{ vm_owner }}"
+    #   - key: vm.request_id
+    #     value: "{{ vm_request_id }}"
+      - key: vm.provisioned
+        value: "{{ ansible_date_time.date }}"
+    wait_for_ip_address: yes
+    wait_for_customization: no
+  delegate_to: localhost
+
+- name: Get some guest information to start
+  vmware_guest_info:
+    name: "{{ vm_name }}"
+    hostname: "{{ vcenter_server }}"
+    username: "{{ vcenter_admin }}"
+    password: "{{ vcenter_pass }}"
+#     tags: true # This isnt what you think it is
+#    schema: vsphere
+    datacenter: "{{ datacenter }}"
+    validate_certs: no
+  delegate_to: localhost
+  register: return_vm
+
+- name: Lets see the output
+  set_fact: 
+    vms_created: "{{ vms_created + [ vm_name + ' '  + return_vm.instance.ipv4] }}"
