@@ -1,0 +1,30 @@
+---
+- name: 
+  hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: os_type
+      prompt: "Is this Linux or Windows"
+    - name: vm_name
+      prompt: "What is the requested name for this VM?"
+
+  tasks:
+    - name: Create Widows VM - {{ vm_name }}
+      debug: 
+        msg: "We are creating the {{ vm_name }} as a Windows VM"
+      when: os_type is match("[wW]indows")
+
+    - name: Create Linux VM - {{ vm_name }}
+      debug: 
+        msg: "We are creating the {{ vm_name }} as a Linux VM"
+      when: os_type is match("[lL]inux")
+
+
+    - name: Do Not Create VM - {{ vm_name }}
+      debug:
+        msg: "You entered {{ os_type }} which is neither Windows or Linux"
+      when: os_type is not match("[wW]indows") and os_type is not match("[lL]inux")  
+
+
+     
+
