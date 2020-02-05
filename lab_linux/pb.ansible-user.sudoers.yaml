@@ -1,5 +1,6 @@
 ---
-- name: Setup no password for ansible-user
+
+- name: Setup no password for ansible-user in sudoers
   hosts: all_linux
   tasks:
     - name: Add the line for ansible-user to sudo file
