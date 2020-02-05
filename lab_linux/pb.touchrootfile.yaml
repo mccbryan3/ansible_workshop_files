@@ -1,0 +1,9 @@
+---
+- name: Touch a file in the root home dir
+  hosts: all_linux
+  gather_facts: yes
+  tasks:
+    - name: Do the touching
+      file:
+        state: touch
+        path: /root/newfile1
