@@ -1,0 +1,6 @@
+datacenter: BPIC
+vm_folder: ansible_lab
+vm_datastore: VC02-V7KG3-F0-01
+vm_network: LS_Adv_Overlay_172_24_101
+cluster: MX-Cluster-01
+vcenter_server: vc02.lab.loc

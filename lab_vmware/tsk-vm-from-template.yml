@@ -21,10 +21,6 @@
     - name: "{{ vm_network }}"
     customization_spec: "{{ custom_spec }}"
     customvalues:
-    #   - key: vm.owner
-    #     value: "{{ vm_owner }}"
-    #   - key: vm.request_id
-    #     value: "{{ vm_request_id }}"
       - key: vm.provisioned
         value: "{{ ansible_date_time.date }}"
     wait_for_ip_address: yes
@@ -37,8 +33,6 @@
     hostname: "{{ vcenter_server }}"
     username: "{{ vcenter_admin }}"
     password: "{{ vcenter_pass }}"
-#     tags: true # This isnt what you think it is
-#    schema: vsphere
     datacenter: "{{ datacenter }}"
     validate_certs: no
   delegate_to: localhost
