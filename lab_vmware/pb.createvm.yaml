@@ -5,8 +5,10 @@
   vars_prompt:
     - name: os_type
       prompt: "Is this Linux or Windows"
+      private: no
     - name: vm_name
       prompt: "What is the requested name for this VM?"
+      private: no
 
   tasks:
     - name: Create Widows VM - {{ vm_name }}
