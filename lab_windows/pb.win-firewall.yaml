@@ -1,0 +1,24 @@
+---
+- name: Configure firewall for Windows
+  hosts: win_nodes
+  gather_facts: yes
+
+  tasks:
+    
+    - name: Open ICMP port
+      win_firewall_rule:
+        name: ICMP Allow incoming V4 echo request
+        enabled: yes
+        state: present
+        action: allow
+        direction: in
+        protocol: icmpv4
+
+    - name: Open RDP 
+      win_firewall_rule:
+        name: Remote Desktop
+        localport: 3389
+        action: allow
+        protocol: tcp
+        enabled: yes
+        state: present
