@@ -36,6 +36,11 @@
         owner: ansible-user
         group: ansible-user
 
+    - name: Ansible Facts
+      debug:
+        msg: "{{ ansible_facts['default_ipv4'] }}"
+      tags: facts
+     
 
 
 
