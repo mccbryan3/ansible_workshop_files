@@ -6,13 +6,36 @@
     var1: "Hello"
     var2: "Thanks"
     var3: "For coming."
+    list_vars:
+      - "{{ var1 }}"
+      - "{{ user  | title }}"
+      - "{{ var2 }}"
+      - "{{ var3 }}"
+
   vars_prompt:
     - name: user
       prompt: "Enter your first name"
       private: no
   tasks:
+
     - name: Echo out the string
       debug:
         msg: "{{ var1 }} {{ user }} {{ var2 }} {{ var3 }}"
+
+    - name: Loop through the list
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ list_vars }}"
+
+    - name: Fill the template
+      template:
+        src: ./template.j2
+        dest: /home/ansible-user/template-test.txt
+        mode: 0664
+        force: yes
+        owner: ansible-user
+        group: ansible-user
+
+
 
 
