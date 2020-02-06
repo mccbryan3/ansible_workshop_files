@@ -1,0 +1,18 @@
+---
+- name: Gather variables
+  hosts: localhost
+  gather_facts: yes
+  vars: 
+    var1: "Hello"
+    var2: "Thanks"
+    var3: "For coming."
+  vars_prompt:
+    - name: user
+      prompt: "Enter your first name"
+      private: no
+  tasks:
+    - name: Echo out the string
+      debug:
+        msg: "{{ var1 }} {{ user }} {{ var2 }} {{ var3 }}"
+
+
