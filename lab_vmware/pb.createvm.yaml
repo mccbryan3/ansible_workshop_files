@@ -2,6 +2,7 @@
 - name: 
   hosts: localhost
   gather_facts: no
+  vars_files: var/vm-admin-vars.yml
   vars_prompt:
     - name: os_type
       prompt: "Is this Linux or Windows"
