@@ -20,9 +20,6 @@
     networks:
     - name: "{{ vm_network }}"
     customization_spec: "{{ custom_spec }}"
-    customvalues:
-      - key: vm.provisioned
-        value: "{{ ansible_date_time.date }}"
     wait_for_ip_address: yes
     wait_for_customization: no
   delegate_to: localhost
@@ -40,4 +37,4 @@
 
 - name: Lets see the output
   set_fact: 
-    vms_created: "{{ vms_created + [ vm_name + ' '  + return_vm.instance.ipv4] }}"
+    vms_created: "{{ return_vm.instance.ipv4 }}"
