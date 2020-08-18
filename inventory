@@ -1,0 +1,23 @@
+[win_nodes]
+win-vm01-01
+
+[lin_nodes]
+lin-vm01-01
+
+[controllers]
+lin-ans01-01
+
+[linux]
+lin_nodes
+controllers
+
+[win_nodes:vars]
+ansible_user=administrator
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+[all:vars]
+ansible_ssh_commen_args='-o StrictHostKeyChecking=no'
+
+
+
