@@ -1,0 +1,48 @@
+- name: Play - basic controller configruation
+  hosts: localhost
+  connection: local
+  
+  tasks:
+    - name: Install pip modules
+      pip:
+        state: present
+        name: "{{ item }}"
+      loop:
+        - hvac
+        - pywinrm
+        - pyvmomi
+
+    - name: Place vim alias in vimrc
+      lineinfile:
+        path: ~/.vimrc 
+        state: present
+        create: yes
+        line: autocmd FileType yaml setlocal ai ts=2 sw=2 et
+        owner: root
+        mode: 0644
+    
+    - name: Configure alias for vim in bashrc
+      lineinfile:
+        path: ~/.bashrc
+        state: present
+        line: alias vi=vim
+        insertafter: '^# User specific aliases and function'
+
+    - name: Pull down vault export info
+      uri:
+       url: http://10.3.50.48/vault 
+       method: GET
+       return_content: yes
+      register: vault_env
+
+    - name: Write vault variables into bashrc 
+      lineinfile:
+        path: ~/.bashrc
+        state: present
+        line: "export {{ item }}"
+      loop: "{{ vault_env.content.split(\r\n) }}"
+      no_log: yes
+
+
+
+
