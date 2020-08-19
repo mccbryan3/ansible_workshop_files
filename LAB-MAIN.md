@@ -13,14 +13,14 @@ The lab machines naming is very important. The names should be defined as shown 
 
 example..
 
-[student01]
-lin-ans01-01
-lin-vm01-01
+[student01]<br />
+lin-ans01-01<br />
+lin-vm01-01<br />
 win-vm01-01
 
-[student02]
-lin-ans01-02
-lin-vm01-02
+[student02]<br />
+lin-ans01-02<br />
+lin-vm01-02<br />
 win-vm01-02
 
 and so on....
@@ -78,8 +78,13 @@ and so on....
     * Enable Strict Name Checking
 *	Windows win_command and win_shell
     * How to use and why not to use
+
+## Optional Labs
+
+**These labs require specialized infrastructure and will be avaialble for use only if your infrastcuture matches the lab**
+
 *	vSphere VM Management
     * Build some VMs
     *	Configure a hosts adv config, time, cluster etc
-*	Storage  management
-    *	Basic Playbook arrangement
+* Storage Management
+    * Basic playbook tasks
