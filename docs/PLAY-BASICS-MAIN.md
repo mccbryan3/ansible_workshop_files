@@ -6,3 +6,5 @@ Plays are defined by the specification of which inventory the play is set to exe
 YAML starts with three dots and uses the yml or yaml extension in Ansible.
 
 **Play structure**
+
+[](/images/play-structure.png)
