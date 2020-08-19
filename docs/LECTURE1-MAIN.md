@@ -53,5 +53,6 @@ __Super Important__
 * host_vars and group_vars
     * May be defined in the inventory file
     * Should be used in dedicated files in host and group var diretcories
-      * Default location /etc/ansible/host_vars and /etc/ansible/group_vars
-    * Group vars and host var files should be named the name of the group or host respectively and 
+        * Default location /etc/ansible/host_vars and /etc/ansible/group_vars
+    * Group vars and host var files should be named the name of the group or host respectively
+        * These files can be located in the /etc/ansible or the project directory
