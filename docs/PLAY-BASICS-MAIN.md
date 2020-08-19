@@ -25,7 +25,7 @@ ___For better vim editing with yaml add the following to the ~/.vimrc file___
 ```
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
 ```
-you can use cursorcolumn to check indentation although I would save this for the command mode in vim
+___you can use cursorcolumn to check indentation although I would save this for the command mode in vim___
 ```
 set cursorcolumn
 ```
