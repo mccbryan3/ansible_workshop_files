@@ -4,9 +4,9 @@
 [Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)<br><br>
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main)<br><br>
 _____________________________________________
-[Lecture 1](/docs/LECTURE1-MAIN.md)<br>
-[Playbook Structure and Basics](/docs/PLAY-BASICS-MAIN.md#lab-main)<br><br>
-Lab 1<br>
+### Domain-01
+[Lecture 1 - Ansible Basic Info and Terminology](/docs/LECTURE1-MAIN.md)<br>
+Lab 1 - Installing and configuring Ansible Engine<br>
 _____________________________________________
 Lecture 2<br>
 Lab 2<br>
