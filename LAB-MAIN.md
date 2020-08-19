@@ -1,8 +1,8 @@
 # Lab Main
 
-### Requirements
+## Requirements
 
-Labs should be created on your own infrastructure. The lab should consist of the following.
+**Labs should be created on your own infrastructure. The lab should consist of the following.**
 
 * One ansible controller VM (centos8)
    * lin-ans01-XX
