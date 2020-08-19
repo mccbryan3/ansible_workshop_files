@@ -2,7 +2,7 @@
 
 Prepared by: Bryan McClellan
 
-This workshop is not to be considered all inclusive. The content here in should be considered enough to get the tools in your hands to start writing and maintain your own playbooks.
+This workshop is not to be considered all inclusive. The content here in should be considered enough to get the tools in your hands to start writing and maintaining your own playbooks.
 This course assumes you have working knowledge of Linux and Windows Server Operating Systems and can work in a Linux text editor.
 
 ## Importance of Source Control Management
