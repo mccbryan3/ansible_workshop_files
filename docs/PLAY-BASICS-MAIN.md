@@ -67,3 +67,29 @@ Sample playbook with name, hosts and tasks
 * Example playbook with task shown below
 
 ![](/images/playbook-example-task.png)
+
+### "Print the output now" task details..
+
+* Task uses the command module
+* Registers the output of the module to the command_result variable
+* Uses this variable to check the result and determine if it has failed
+
+The second two register and **failed_when** are optional. These are best practice when working with the command module especially. Since the command module itself does not consider the command that is passed failing you will want to check the output for something to verify that the command succeeded or failed. You can also do something similar with **changed_when** for command and shell.
+
+### Basic Tasks..
+
+yum, copy, service, command, shell, etc……
+
+ansible-doc task for more information on tasks
+
+### Playbooks can have multiple plays
+```
+- name
+  hosts:
+  tasks:
+     -  task1_play1
+- name
+  hosts:
+  tasks:
+     - task1_play2
+```
