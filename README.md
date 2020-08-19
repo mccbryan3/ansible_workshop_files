@@ -5,3 +5,6 @@
 
 
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main)
+
+[Playbook Structure and Basics](/docs/PLAY-BASICS-MAIN.md#lab-main)
+
