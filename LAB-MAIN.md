@@ -3,8 +3,28 @@
 Labs should be created on your own infrastructure. The lab should consist of the following.
 
 * One ansible controller VM (centos8)
+   * lin-ans01-XX
 * One linux VM (centos8)
+   * lin-vm01-XX
 * One windows VM (windows 2019)
+   * win-vm01-XX
+
+The lab machines naming is very important. The names should be defined as shown above with the "XX" beign replaced by two digits starting from '01' and icrementing based on the number of students in the lab. This will line up directly to student numbers as we progeress through the labs.
+
+example..
+
+[student01]
+lin-ans01-01
+lin-vm01-01
+win-vm01-01
+
+[student02]
+lin-ans01-02
+lin-vm01-02
+win-vm01-02
+
+and so on....
+
 
 **We will be using CentOS Enterprise Linux in this lab. The lab will be tested with CentOS 8 using Ansible 2.9**
 
