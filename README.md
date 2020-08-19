@@ -8,12 +8,15 @@ _____________________________________________
 [Lecture 1 - Ansible Basic Info and Terminology](/docs/LECTURE1-MAIN.md)<br>
 Lab 1 - Installing and configuring Ansible Engine<br>
 _____________________________________________
+### Domain-02
 Lecture 2<br>
 Lab 2<br>
 _____________________________________________
+### Domain-03
 Lecture 3<br>
 Lab 3<br>
 _____________________________________________
+### Domain-04
 Lecture 4<br>
 Lab 4<br>
 
