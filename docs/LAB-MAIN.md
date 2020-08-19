@@ -58,17 +58,14 @@ and so on....
     * Host_Vars and Group_Vars*	Variables
     * Syntax
     * Use cases
-*	Dissecting a playbook
-    *	hosts
-    * vars and vars_files
-    * secrets management
-
+    
 ### Playbook basics
-* Ansible vault
 *	Dissecting a playbook
     *	hosts
     * vars and vars_files
     * secrets management
+* Ansible vault
+    * Secrets Management
 
 ### Ansible commands brief
 * Documentation with ansible-doc
