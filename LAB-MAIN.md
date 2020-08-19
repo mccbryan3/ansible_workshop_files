@@ -1,5 +1,7 @@
 # Lab Main
 
+### Requirements
+
 Labs should be created on your own infrastructure. The lab should consist of the following.
 
 * One ansible controller VM (centos8)
@@ -29,13 +31,11 @@ and so on....
 **We will be using CentOS Enterprise Linux in this lab. The lab will be tested with CentOS 8 using Ansible 2.9**
 
 ## Labs Content Summary
-*	Variables
-    * Syntax
-    * Use cases
-    * Register
-*	Templating
-    * Jinja Templating
-    * Why its so awesome
+
+### Install Ansible and configure the controller
+* Install git
+* Install vim
+    * Configure vim for autoindent with yaml
 *	Install Ansible
     * ansible-version
 *	Check Python
@@ -43,12 +43,25 @@ and so on....
 *	Pip
     * Pip install pyWinrm
     * Pip install pyvmomi
-*	Ansible-Doc
-    *	Snippets
+
+### Ansible install and directory structure
+* What comes with the install and where is it at
+    * /etc/ansible
 *	Dissecting an ansible.cfg file
     *	locations
     *	basic parameters
     * ansible-config
+
+### Playbook basics
+* Inventory
+*	Variables
+    * Syntax
+    * Use cases
+    * Register
+* Ansible vault
+*	Templating
+    * Jinja Templating
+    * Why its so awesome
 *	Inventory File
     * Dissect inventory file
     * Dynamic Inventory
