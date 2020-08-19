@@ -27,7 +27,6 @@ win-vm01-02
 
 and so on....
 
-
 **We will be using CentOS Enterprise Linux in this lab. The lab will be tested with CentOS 8 using Ansible 2.9**
 
 ## Labs Content Summary
@@ -53,19 +52,16 @@ and so on....
     * ansible-config
 
 ### Playbook basics
-* Inventory
-*	Variables
+*	Inventory Files
+    * Dissect inventory file
+    * Dynamic Inventory
+    * Host_Vars and Group_Vars*	Variables
     * Syntax
     * Use cases
-    * Register
 * Ansible vault
 *	Templating
     * Jinja Templating
     * Why its so awesome
-*	Inventory File
-    * Dissect inventory file
-    * Dynamic Inventory
-    * Host_Vars and Group_Vars
 *	Ansible Adhoc Commands
     * -m <module> -a [<key=value>]
 *	Dissecting a playbook
