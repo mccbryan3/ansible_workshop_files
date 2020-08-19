@@ -22,15 +22,20 @@ YAML starts with three dots and uses the yml or yaml extension in Ansible.
 
 ___For better vim editing with yaml add the following to the ~/.vimrc file___
 
+```
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
+```
+you can use cursorcolumn to check indentation although I would save this for the command mode in vim
+```
 set cursorcolumn
-
-Details on the autocmd
-
+```
+___Details on the autocmd___
+```
 #ai = auto indent<br>
 #ts = tab stop<br>
 #sw = Shift Width<br>
 #et = expansetab<br>
+```
 
 * Check syntax before starting
 
