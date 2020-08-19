@@ -9,16 +9,16 @@ YAML starts with three dots and uses the yml or yaml extension in Ansible.
 
 ![](/images/play-structure.png)
 
-- Playbooks and YAML in general use a python type indentation to signify hierarchy.
-- Playbooks may consists of multiple plays.
-- Variables do not persist through plays.
-- Playbooks will run by default as the executing user.
+* Playbooks and YAML in general use a python type indentation to signify hierarchy.
+* Playbooks may consists of multiple plays.
+* Variables do not persist through plays.
+* Playbooks will run by default as the executing user.
 
-Basic on Playbooks
+### Basic on Playbooks
 
-– Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yml file extension.
+**Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yml file extension.
 
-Indentation is super important and the indention should be configured in vim. The indentation is based on two spaces.
+**Indentation is super important and the indention should be configured in vim. The indentation is based on two spaces.
 
 – For better vim editing with yaml add the following to the ~/.vimrc file
 
@@ -57,3 +57,8 @@ Sample playbook with name, hosts and tasks
     - second
     - third
 ```
+* Playbook tasks are ran in order
+
+* Example playbook with task shown below
+
+![](/images/playbook-example-task.png)
