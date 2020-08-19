@@ -20,4 +20,4 @@ yum install ansible git vim -y
 5.	Run ```ansible –version```
 
 Notice the ansible version, the default config file path and the python version being used
-![](/images/ansible-version.png)
+![](/images/ansible-version1.png)
