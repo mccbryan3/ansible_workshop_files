@@ -4,4 +4,4 @@
 [Ansible Workshop Summary Main](/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)
 
 
-Ansible Workshop Lab Main
+[Ansible Workshop Lab Main](/LAB-MAIN.md#lab-main)
