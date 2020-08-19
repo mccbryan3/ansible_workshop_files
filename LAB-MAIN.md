@@ -46,24 +46,26 @@ and so on....
 ### Ansible install and directory structure
 * What comes with the install and where is it at
     * /etc/ansible
+    
+### Ansible files
 *	Dissecting an ansible.cfg file
     *	locations
     *	basic parameters
     * ansible-config
-
-### Playbook basics
 *	Inventory Files
     * Dissect inventory file
     * Dynamic Inventory
     * Host_Vars and Group_Vars*	Variables
     * Syntax
     * Use cases
+*	Dissecting a playbook
+    *	hosts
+    * vars and vars_files
+    * secrets management
+
+### Playbook basics
+
 * Ansible vault
-*	Templating
-    * Jinja Templating
-    * Why its so awesome
-*	Ansible Adhoc Commands
-    * -m <module> -a [<key=value>]
 *	Dissecting a playbook
     *	hosts
     * vars and vars_files
@@ -72,6 +74,14 @@ and so on....
     * --syntax-check
     *	--check
     *	--extra-variables
+   
+
+*	Templating
+    * Jinja Templating
+    * Why its so awesome
+
+*	Ansible Adhoc Commands
+    * -m <module> -a [<key=value>]
 *	Linux conf file Management with templates
     *	Chrony
     * Nfs-automount configuration
