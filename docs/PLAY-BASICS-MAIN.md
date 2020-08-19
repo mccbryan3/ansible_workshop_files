@@ -7,4 +7,4 @@ YAML starts with three dots and uses the yml or yaml extension in Ansible.
 
 **Play structure**
 
-[](../images/play-structure.png)
+![](/images/play-structure.png)
