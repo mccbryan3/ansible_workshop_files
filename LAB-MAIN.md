@@ -64,31 +64,40 @@ and so on....
     * secrets management
 
 ### Playbook basics
-
 * Ansible vault
 *	Dissecting a playbook
     *	hosts
     * vars and vars_files
     * secrets management
+
+### Ansible commands brief
+* Documentation with ansible-doc
+*	Running Ansible Adhoc Commands
+    * ansible <inventory> -m <module> -a [<key=value>]
 *	Ansible-Playbook
     * --syntax-check
     *	--check
     *	--extra-variables
-   
 
+### Variables and Templating
+* Variable basics
+    * Jinja variables
+    * Jinja common 
 *	Templating
     * Jinja Templating
     * Why its so awesome
-
-*	Ansible Adhoc Commands
-    * -m <module> -a [<key=value>]
 *	Linux conf file Management with templates
     *	Chrony
     * Nfs-automount configuration
+
+### Basic linux playbooks
 *	Linux software install
     * Yum Apt
 *	Linux command and shell
     *	How to use and why not to use it
+
+### Basic Windows Configuration and Playbooks
+* Windows WIRM over https configuration
 *	Windows Feature and DSC
     *	IIS
     *	SQL
