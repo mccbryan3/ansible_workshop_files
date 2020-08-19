@@ -79,8 +79,10 @@ The second two register and **failed_when** are optional. These are best practic
 ### Basic Tasks..
 
 yum, copy, service, command, shell, etc……
-
-ansible-doc task for more information on tasks
+```
+ansible-doc task 
+```
+...for more information on tasks
 
 ### Playbooks can have multiple plays
 ```
