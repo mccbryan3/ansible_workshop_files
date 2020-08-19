@@ -28,20 +28,20 @@
         line: alias vi=vim
         insertafter: '^# User specific aliases and function'
 
-    - name: Pull down vault export info
-      uri:
-       url: http://10.3.50.48/vault 
-       method: GET
-       return_content: yes
-      register: vault_env
+#    - name: Pull down vault export info
+#      uri:
+#       url: http://vaultserver/vault 
+#       method: GET
+#       return_content: yes
+#      register: vault_env
 
-    - name: Write vault variables into bashrc 
-      lineinfile:
-        path: ~/.bashrc
-        state: present
-        line: "export {{ item }}"
-      loop: "{{ vault_env.content.split(\r\n) }}"
-      no_log: yes
+#    - name: Write vault variables into bashrc 
+#      lineinfile:
+#        path: ~/.bashrc
+#        state: present
+#        line: "export {{ item }}"
+#      loop: "{{ vault_env.content.split(\r\n) }}"
+#      no_log: yes
 
 
 

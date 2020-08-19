@@ -7,9 +7,12 @@ lin-vm01-01
 [controllers]
 lin-ans01-01
 
-[linux]
+[linux:children]
 lin_nodes
 controllers
+
+[windows:children]
+win_ndoes
 
 [win_nodes:vars]
 ansible_user=administrator
