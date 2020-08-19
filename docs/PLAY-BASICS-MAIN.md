@@ -1,4 +1,4 @@
-# Ansible Workshop – Ansible Playbook Basic Structure
+# Ansible Workshop – Ansible Playbook Basics
 
 ## Plays
 
