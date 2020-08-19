@@ -21,3 +21,13 @@ yum install ansible git vim -y
 
 Notice the ansible version, the default config file path and the python version being used
 ![](/images/ansible-version1.png)
+
+6.	Clone the lab repo local
+```
+git clone 
+```
+7. 
+6.	Cat the default-inventory file and verify
+Be aware of the ini structure.
+Group variables are also specified in this file
+
