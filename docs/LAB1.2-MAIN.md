@@ -1,6 +1,8 @@
 
 # Lab 1.2 - Configure Credentials for Inventory Hosts
 
+### Linux Configuration
+
 1. Verify your inventory file is configured correctly and that the hostnames are resolvable or you have 'ansible_host=' variable set.
 
 2. Open and view the linux_lab/pb.lab1.2-ansible-user.yaml file.
@@ -56,6 +58,31 @@ cd ansible_workshop_files
 ansible linux -i inventory -m setup
 ```
 
+### Windows Configuration
 
+Our Windows guests will need variable assignment for the username and password to use over winrm
+
+Ansible has ariable assignment that can be used at many levels in the order precedence...
+
+Some are listed below in order of precendence.
+
+* inventory file
+* group_vars
+* host_vars
+
+There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project.
+
+***Be sure you are in the ansible_workshop_files directory***
+
+1. Create the group_vars directory
+
+```
+mkdir group_vars
+```
+2.	Cd into the directory
+3.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
+4.	Add the windows ansible user credential variables to the file and save
+
+~[](/images/lab1.2-windows-vars.png)
 
 
