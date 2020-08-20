@@ -2,9 +2,6 @@
 - name: Touch a file in the root home dir
   hosts: linux
   gather_facts: yes
-  become: yes
-  become_user: root
-  become_method: sudo
 
   tasks:
     - name: Do the touching
