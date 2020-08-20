@@ -1,5 +1,8 @@
 # Ansible Workshop Files
-**This repo contains all files required for the Ansible Workshop including course lecture, terminology and lab manuals.**
+
+**This repo is currently a work in progress as I port my workshop from a central student lecture to a github repo based remote led isntruction class using the students infrastructure .**
+
+**This repo will contain all files required for the Ansible Workshop including course lecture, terminology and lab manuals.**
 
 _____________________________________________
 ### Preface and Basics-101
