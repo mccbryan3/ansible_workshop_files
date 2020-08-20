@@ -1,6 +1,6 @@
 ---
 - name: Touch a file in the root home dir
-  hosts: all_linux
+  hosts: linux
   gather_facts: yes
   tasks:
     - name: Do the touching
