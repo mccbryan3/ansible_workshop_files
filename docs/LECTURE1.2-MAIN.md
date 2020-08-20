@@ -14,3 +14,5 @@ ansible <inventory> -m setup -i inventory-file --user root --ask-pass
 ```
 
 This process can be used to configure your ansible user and to generate and copy ssh public keys
+
+### Windows Inventory
