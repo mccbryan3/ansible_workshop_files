@@ -25,3 +25,5 @@ The below script will need to be ran on your Windows hosts to generate a certifi
 ___This is the default script and provides self-signed certificate. You may want to use your own PKI for certificates___
 
 [ConfigureRemotingForAnsible](https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)
+
+For ease of use these scripts can be run on your windows inventory as a RunOnce task during machine deployment.
