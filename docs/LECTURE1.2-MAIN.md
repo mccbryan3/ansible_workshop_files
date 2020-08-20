@@ -59,9 +59,8 @@ Ansible provides default variables to support the username and password for conn
 
 For windows we will specify these as the below variables.
 
-ansible_user: <administrator><br>
+ansible_user: administrator<br>
 ansible_pass: <admin_password>
 
 
-
-Lab 1.2
+[Lab 1.2](/docs/LAB1.2-MAIN.md)
