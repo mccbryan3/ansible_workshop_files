@@ -15,6 +15,47 @@ Then we mvoe onto copying the local users public key into the authorized_keys fi
 
 ![](/images/lab1.2-ansible-user.png)
 
+3. Run the playbook while specifying the root credentials as parameters to the ansible-playbook command.
+
+First run the --syntax-check then run the playbook.<br>
+
+The playbook should prompt for password of the root user.
+
+```
+ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass --syntax-check
+
+ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass
+````
+
+4. su into the ansible-user
+
+```
+su - ansible-user
+```
+
+5. Re-clone the github repo for the workshop as we will now be working as ansible-user
+
+```
+git clone https://github.com/mccbryan3/ansible_workshop_files.git
+```
+
+6. Exit out of ansible-user and copy your inventory file then su back to ansible-user
+
+```
+exit
+cp /root/ansible_workshop_files/inventory /home/ansible-user/ansible_workshop_files/
+su - ansible-user
+cd ansible_workshop_files
+```
+
+** Recheck your inventory file **
+
+7. Run setup on the linux hosts to verify connectivity
+
+```
+ansible linux -i inventory -m setup
+```
+
 
 
 
