@@ -78,9 +78,16 @@ Notice the module error for winrm and requests
 cat pb.controller-config.yaml
 ````
 These tasks only run on localhost as specified at the top of the playbook
-This will install our missing modules using pip.
-___hvac s optional and may be removed___
+This will install our missing modules using pip.<br>
+___hvac optional and may be removed___
 
 ![](/images/lab1-controller-config1.png)
 
-Python modules installed here are pywinrm for windows machine support, pyvmomi for vmware support and hvac was included for secrets management with HashiVault. 
+Python modules installed here are pywinrm for windows machine support, pyvmomi for vmware support and hvac was included for secrets management with HashiVault.
+
+9. Run the playbook
+```
+ansible-playbook controller-pre-reqs.yml
+```
+Examine the output
+
