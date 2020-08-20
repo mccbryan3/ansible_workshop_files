@@ -11,7 +11,7 @@ _____________________________________________
 [Lecture 1.1 - Ansible Basic Info and Terminology](/docs/LECTURE1.1-MAIN.md)<br>
 [Lab 1.1 - Installing and configuring Ansible Engine](/docs/LAB1.1-MAIN.md)<br>
 [Lecture 1.2 - Connecting to inventory machines](/docs/LECTURE1.2-MAIN.md)<br>
-[Lab 1.2 - Configure Credentials for Inventory Hosts](/docs/LAB1.2-MAIN.md)<br> - Configure machine credentials for Ansible<br>
+[Lab 1.2 - Configure Credentials for Inventory Hosts](/docs/LAB1.2-MAIN.md)<br>
 _____________________________________________
 ### Domain-02
 Lecture 2<br>
