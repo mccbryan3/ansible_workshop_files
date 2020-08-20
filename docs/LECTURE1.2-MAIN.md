@@ -15,6 +15,25 @@ ansible <inventory> -m setup -i inventory-file --user root --ask-pass
 
 This process can be used to configure your ansible user and to generate and copy ssh public keys
 
+**Host key checking**
+Ansible enables host key checking by default. This provides security checks for man in the middle attacks by validating host key each time a connection is made.
+
+This can cause prompts during plays to accept host keys on initial play run. For this lab we will be disabling host key checking to bypass these prompts.
+
+Use these in your environment at your own risk.
+
+Entry for ansible.cfg
+
+```
+[defaults]
+host_key_checking = False
+Alternatively this can be set by the ANSIBLE_HOST_KEY_CHECKING environment variable:
+```
+This can alse be set with environment variable as shown below
+
+```
+$ export ANSIBLE_HOST_KEY_CHECKING=False
+```
 ### Windows Inventory
 
 Connection to Windows inventory requires the use of WINRM over HTTPS.<br>
