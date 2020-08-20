@@ -1,4 +1,4 @@
-# Lab 1. Install Ansible and configure the controller
+# Lab 1.1 Install Ansible and configure the controller
 
 1.	Log into controller
 2.	Using Putty SSH into your Ansible Controller - ___check credential details with instructure___
