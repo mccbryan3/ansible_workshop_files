@@ -79,3 +79,5 @@ cat pb.controller-config.yaml
 ````
 These tasks only run on localhost as specified at the top of the playbook
 This will install our missing modules using pip
+
+![](/images/lab1-controller-config.png)
