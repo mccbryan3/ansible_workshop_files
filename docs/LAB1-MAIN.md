@@ -91,7 +91,7 @@ ansible-playbook controller-pre-reqs.yml
 ```
 Examine the output
 
-**End of lab 1
+**End of lab 1.1**
 
 [Return to Main](/README.md)
 
