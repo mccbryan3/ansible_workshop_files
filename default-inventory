@@ -14,7 +14,7 @@ controllers
 [windows:children]
 win_nodes
 
-[win_nodes:vars]
+[windows:vars]
 ansible_user=administrator
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
