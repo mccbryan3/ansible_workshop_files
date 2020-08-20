@@ -22,7 +22,7 @@ First run the --syntax-check then run the playbook.<br>
 The playbook should prompt for password of the root user.
 
 ```
-ansible-playbook -i default-inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass --syntax-check
+ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass --syntax-check
 
 ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass
 ````
@@ -39,12 +39,22 @@ su - ansible-user
 git clone https://github.com/mccbryan3/ansible_workshop_files.git
 ```
 
-** Recheck your default-inventory file as it will be set back to its original state. You may simply copy this file from /root homefolder into the working directory if necessary.
-
-6. Run setup on the linux hosts to verify connectivity
+6. Exit out of ansible-user and copy your inventory file then su back to ansible-user
 
 ```
-ansible linux -i inve
+exit
+cp /root/ansible_workshop_files/inventory /home/ansible-user/ansible_workshop_files/
+su - ansible-user
+cd ansible_workshop_files
+```
+
+** Recheck your inventory file **
+
+7. Run setup on the linux hosts to verify connectivity
+
+```
+ansible linux -i inventory -m setup
+```
 
 
 
