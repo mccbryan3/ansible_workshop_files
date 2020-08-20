@@ -53,4 +53,15 @@ Credentials for remoting should be stored in a secure place and encrypted.
 
 A good practice is to use Ansible Vault for a solution to these best practce recommendations.
 
+** Windows Ansible Connection Variables **
+
+Ansible provides default variables to support the username and password for connections.
+
+For windows we will specify these as the below variables.
+
+ansible_user: <administrator>
+ansible_pass: <admin_password>
+
+
+
 Lab 1.2
