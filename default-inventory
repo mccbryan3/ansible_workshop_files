@@ -12,7 +12,7 @@ lin_nodes
 controllers
 
 [windows:children]
-win_ndoes
+win_nodes
 
 [win_nodes:vars]
 ansible_user=administrator
