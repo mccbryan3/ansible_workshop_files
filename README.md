@@ -10,7 +10,7 @@ _____________________________________________
 ### Domain-01
 [Lecture 1.1 - Ansible Basic Info and Terminology](/docs/LECTURE1-MAIN.md)<br>
 [Lab 1.1 - Installing and configuring Ansible Engine](/docs/LAB1-MAIN.md)<br>
-Lecture 1.2 - Connecting to inventory machines
+Lecture 1.2 - Connecting to inventory machines<br>
 Lab 1.2 - Configure machine credentials for Ansible<br>
 _____________________________________________
 ### Domain-02
