@@ -19,6 +19,6 @@
       
     - name: Add the line for ansible-user to sudo file
       lineinfile:
-      path: /etc/sudoers
-      line: 'ansible-user ALL=(ALL) NOPASSWD: ALL'
-      validate: /usr/sbin/visudo -cf %s
+        path: /etc/sudoers
+        line: 'ansible-user ALL=(ALL) NOPASSWD: ALL'
+        validate: /usr/sbin/visudo -cf %s
