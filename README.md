@@ -9,7 +9,8 @@ _____________________________________________
 _____________________________________________
 ### Domain-01
 [Lecture 1 - Ansible Basic Info and Terminology](/docs/LECTURE1-MAIN.md)<br>
-Lab 1 - Installing and configuring Ansible Engine<br>
+Lab 1.1 - Installing and configuring Ansible Engine<br>
+Lab 1.2 - Configure credentials for Ansible to use<br>
 _____________________________________________
 ### Domain-02
 Lecture 2<br>
