@@ -62,7 +62,20 @@ Group variables are also specified in this file
 7. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
 ___If you do not have name resolution please notify the instructor to help specify ansible_host variable___
 
-8. Run setup command on win_nodes hosts
+8. List hosts from the inventory file using --list-hosts  parameters
+
+```
+ansible all -i default-inventory --list-hosts
+```
+
+9. List groups of hosts in teh inventory file
+
+```
+ansible linux -i default-inventory --list-hosts
+
+```
+
+10. Run setup command on win_nodes hosts
 
 Ansible adhoc commands are in the format below.<br>
 ```
@@ -73,7 +86,7 @@ We are also specifying the inventory file with the -i option
 
 Notice the module error for winrm and requests
 
-8.	Examine controller-config playbook
+11.	Examine controller-config playbook
 ```
 cat pb.controller-config.yaml
 ````
@@ -85,11 +98,21 @@ ___hvac optional and may be removed___
 
 Python modules installed here are pywinrm for windows machine support, pyvmomi for vmware support and hvac was included for secrets management with HashiVault.
 
-9. Run the playbook
+12. Run the playbook
 ```
 ansible-playbook controller-pre-reqs.yml
 ```
 Examine the output
+13. Rerun the setup command on the windows host group
+
+```
+ansible windows -i default-inventory -m setup
+```
+Examine the new message
+
+![](/images/lab1.1-windows-ssl-pass-error.png)
+
+Next we will configure credentials for connecting to the machines in the inventory
 
 **End of lab 1.1**
 
