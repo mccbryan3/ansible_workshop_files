@@ -105,12 +105,12 @@ ___hvac optional and may be removed___
 
 Python modules installed here are pywinrm for windows machine support, pyvmomi for vmware support and hvac was included for secrets management with HashiVault.
 
-16. Run the playbook
+15. Run the playbook
 ```
 ansible-playbook controller-pre-reqs.yml
 ```
 Examine the output
-17. Rerun the setup command on the windows host group
+16. Rerun the setup command on the windows host group
 
 ```
 ansible windows -i default-inventory -m setup
