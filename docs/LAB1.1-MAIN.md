@@ -114,6 +114,11 @@ Examine the new message
 
 Next we will configure credentials for connecting to the machines in the inventory
 
+14. Copy your default-inventory file and name it inventory to make a "backup"
+
+```
+cp default-inventory inventory
+
 **End of lab 1.1**
 
 [Return to Main](/README.md)
