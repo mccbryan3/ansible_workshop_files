@@ -73,11 +73,11 @@ We are also specifying the inventory file with the -i option
 
 Notice the module error for winrm and requests
 
-8.	Examine pre-reqs playbook
+8.	Examine controller-config playbook
 ```
 cat pb.controller-config.yaml
 ````
 These tasks only run on localhost as specified at the top of the playbook
 This will install our missing modules using pip
 
-![](/images/lab1-controller-config.png)
+![](/images/lab1-controller-config1.png)
