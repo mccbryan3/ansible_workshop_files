@@ -27,3 +27,11 @@ ___This is the default script and provides self-signed certificate. You may want
 [ConfigureRemotingForAnsible](https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)
 
 For ease of use these scripts can be run on your windows inventory as a RunOnce task during machine deployment.
+
+Once your Windows machines are configured properly for powershell remoting you will also need a mechanism for providing username and password credentials each time a playbook or ad-hoc command is run against this inventory.
+
+Credentials for remoting should be stored in a secure place and encrypted.
+
+A good practice is to use Ansible Vault for a solution to these best practce recommendations.
+
+Lab 1.2
