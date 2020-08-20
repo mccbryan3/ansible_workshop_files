@@ -83,6 +83,8 @@ mkdir group_vars
 3.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
 4.	Add the windows ansible user credential variables to the file and save
 
-~[](/images/lab1.2-windows-vars.png)
+![](/images/lab1.2-windows-vars.png)
+
+5.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
 
 
