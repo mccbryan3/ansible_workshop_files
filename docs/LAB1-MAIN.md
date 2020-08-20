@@ -1,7 +1,7 @@
 # Lab 1. Install Ansible and Make it Function
 
 1.	Log into controller
-2.	Using Putty SSH into your Ansible Controller - __check credential details with instructure__
+2.	Using Putty SSH into your Ansible Controller - ___check credential details with instructure___
 
 <span style="color:red">lin-ans01-student_number</span>
 
@@ -59,14 +59,23 @@ ansible_ssh_commen_args='-o StrictHostKeyChecking=no'
 Be aware of the ini structure.<br>
 Group variables are also specified in this file
 
-7. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution
-__If you do not have name resolution please notify the instructor to help specify ansible_host variable__
+7. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
+___If you do not have name resolution please notify the instructor to help specify ansible_host variable___
+
 8. Run setup command on win_nodes hosts
 
 Ansible adhoc commands are in the format below.<br>
 ```
-ansible [pattern] -m [module] -a "[module options]"
+ansible [inventory_pattern] -m [module] -a "[module options]"
 ```
 We are also specifying the inventory file with the -i option
+![](/images/lab1-winrm-error.png)
 
 Notice the module error for winrm and requests
+
+8.	Examine pre-reqs playbook
+```
+cat pb.controller-config.yaml
+````
+These tasks only run on localhost as specified at the top of the playbook
+This will install our missing modules using pip
