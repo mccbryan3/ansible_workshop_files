@@ -74,7 +74,7 @@ cd  group_vars
 vim linux.yaml
 ```
 
-10. Enter the become variables required
+10. Enter the become variables required and write the file
 
 ```
 ---
