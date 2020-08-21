@@ -98,17 +98,26 @@ The output should look like the following.
 
 Our Windows guests will need variable assignment for the username and password to use over winrm
 
-There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project.
+There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project. We will also be using the dedicated file to encrypt our password using ansible-vault.
 
 ***Be sure you are in the ansible_workshop_files directory***
 
-1.	Cd into the directory
-2.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
-3.	Add the windows ansible user credential variables to the file and save
+1.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
+```
+vim group_vars/windwows.yaml
+````
+3.	Add the windows ansible user credential variables to the file and save (stars should be replaced by your windows machine password)
 
 ![](/images/lab1.2-windows-vars.png)
 
-4.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
+4. Verify the credentials work for your lab box.
+
+```
+ansible windows -i inventory -m setup
+```
+Your output should be a large list of ansible_facts from the windows lab host.
+
+5.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
 
 [Return to Main](/README.md)
 
