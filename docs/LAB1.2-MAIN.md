@@ -136,5 +136,7 @@ Provide the vault password when prompted.
 ansible windows -i inventory -m setup --ask-vault-pass
 ```
 
+**End of Lab1.2**
+
 [Return to Main](/README.md)
 
