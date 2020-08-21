@@ -117,7 +117,24 @@ ansible windows -i inventory -m setup
 ```
 Your output should be a large list of ansible_facts from the windows lab host.
 
+Since our windows user credentials are now stored in plain text we will want to encrypt this file using [ansible-vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
+
 5.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
+
+```
+ansible-vault encrypt group_vars/windows.yaml
+New Vault password: 
+Confirm New Vault password:
+Encryption successful
+```
+
+6. Rerun your ansible setup module on the windows guests providing the --ask-vault-pass parameter
+
+Provide the vault password when prompted.
+
+```
+ansible windows -i inventory -m setup --ask-vault-pass
+```
 
 [Return to Main](/README.md)
 
