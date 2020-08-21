@@ -58,17 +58,21 @@ cd ansible_workshop_files
 ansible linux -i inventory -m setup
 ```
 
-### Windows Configuration
+### group vars
 
-Our Windows guests will need variable assignment for the username and password to use over winrm
-
-Ansible has ariable assignment that can be used at many levels in the order precedence...
+Ansible has variable assignment that can be used at many levels in the order precedence...
 
 Some are listed below in order of precendence.
 
 * inventory file
 * group_vars
 * host_vars
+
+We will be using group_vars in the project directory to specify the variables required for privilege escalation and windows adminstrator credentials.
+
+### Windows Configuration
+
+Our Windows guests will need variable assignment for the username and password to use over winrm
 
 There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project.
 
