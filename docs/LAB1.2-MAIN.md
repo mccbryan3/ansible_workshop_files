@@ -88,8 +88,11 @@ vim linux_lab/pb.touchrootfile.yaml
 12. Quit the playbook without writing and run the playbook.
 
 ```
-ansible-playbook 
+ansible-playbook -i inventory lab_linux/pb.touchrootfile.yaml
 ```
+The output should look like the following.
+
+![](/images/lab1.2-touchroot.png)
 
 ### Windows Configuration
 
