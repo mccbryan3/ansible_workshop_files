@@ -23,6 +23,8 @@ First run the --syntax-check then run the playbook.<br>
 
 The playbook should prompt for password of the root user.
 
+***In this playbook we are configuruing the ansible-user in the sudoers file to have access to run all commands wihtout a password prompt***
+
 ```
 ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass --syntax-check
 
@@ -58,17 +60,36 @@ cd ansible_workshop_files
 ansible linux -i inventory -m setup
 ```
 
-### group vars
+**Configure privilege escalation variables for the linux ansible-user
 
-Ansible has variable assignment that can be used at many levels in the order precedence...
+8. Create the group_vars directory and cd into the directory
+```
+mkdir group_vars
+cd  group_vars
+```
 
-Some are listed below in order of precendence.
+9. Create the file used for group varaibles (must be named after the group name)
 
-* inventory file
-* group_vars
-* host_vars
+```
+vim linux.yaml
+```
 
-We will be using group_vars in the project directory to specify the variables required for privilege escalation and windows adminstrator credentials.
+10. Enter the become variables required
+
+```
+---
+ansible_become: True
+```
+11. Change directory back to the root of the project and examine pb.touchrootfile.yaml playbook.
+```
+cd..
+vim linux_lab/pb.touchrootfile.yaml
+```
+12. Quit the playbook without writing and run the playbook.
+
+```
+ansible-playbook 
+```
 
 ### Windows Configuration
 
@@ -78,18 +99,13 @@ There are a lot of options here however so we dont have to specify these in ever
 
 ***Be sure you are in the ansible_workshop_files directory***
 
-1. Create the group_vars directory
-
-```
-mkdir group_vars
-```
-2.	Cd into the directory
-3.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
-4.	Add the windows ansible user credential variables to the file and save
+1.	Cd into the directory
+2.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
+3.	Add the windows ansible user credential variables to the file and save
 
 ![](/images/lab1.2-windows-vars.png)
 
-5.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
+4.	Run ansible-vault on the file to encrypt its contents and provide ‘password’ as the vault password (this would normally be something more secure)
 
 [Return to Main](/README.md)
 
