@@ -94,7 +94,7 @@ ansible_pass: <admin_password>
 
 Credentials for remoting should be stored in a secure place and encrypted.
 
-A good practice is to use Ansible Vault for a solution to these best practce recommendations.
+A good practice is to use [Ansible Vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html) as a solution to encrypting secret data including but not limited to ansible connection credentials.
 
 Ansible Vault can be applied to any variable file used in ansible using the ```ansible-vault``` command. Once a file or the contents of a file are encrypted the ansible commands ran using these files will need to be passed the vault password.
 
