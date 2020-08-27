@@ -64,10 +64,16 @@ ansible_winrm_server_cert_validation=ignore
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ```
 Be aware of the ini structure.<br>
-Group variables are also specified in this file
+Group variables are also specified in this file.
 
 10. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
 ___If you do not have name resolution please notify the instructor to help specify ansible_host variable___
+
+example of ansible_host variable...
+
+```
+lin-vm01-XX.yourdomain ansible_host=192.168.0.100
+```
 
 11. List hosts from the inventory file using --list-hosts  parameters
 
