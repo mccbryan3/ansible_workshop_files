@@ -81,10 +81,6 @@ For ease of use these scripts can be run on your windows inventory as a RunOnce 
 
 Once your Windows machines are configured properly for powershell remoting you will also need a mechanism for providing username and password credentials each time a playbook or ad-hoc command is run against this inventory.
 
-Credentials for remoting should be stored in a secure place and encrypted.
-
-A good practice is to use Ansible Vault for a solution to these best practce recommendations.
-
 **Windows Ansible Connection Variables**
 
 Ansible provides default variables to support the username and password for connections.
@@ -93,6 +89,46 @@ For windows we will specify these as the below variables.
 
 ansible_user: administrator<br>
 ansible_pass: <admin_password>
+
+### Ansible Vault
+
+Credentials for remoting should be stored in a secure place and encrypted.
+
+A good practice is to use Ansible Vault for a solution to these best practce recommendations.
+
+Ansible Vault can be applied to any variable file used in ansible using the ```ansible-vault``` command. Once a file or the contents of a file are encrypted the ansible commands ran using these files will need to be passed the vault password.
+
+Here are some examples of using the ```ansible-vault``` command.
+
+**Create a new encrypted file**
+
+```ansible-vault create varfile.yaml```
+
+**Encrypt and existing file**
+
+```ansible-vault encrypt varfile.yaml```
+
+**Edit and encrypted file**
+
+```ansible-vault edit varfile.yaml --ask-vault-pass```
+
+**Viewing encrypted file**
+
+```ansible-vault view varfile.yaml --ask-vault-pass```
+
+**Decrypt encrypted file**
+
+```ansible-vault decrypt varfile.yaml --ask-vault-pass```
+
+**Rekey an encrypted file**
+
+```ansible-vault rekey varfile.yaml --ask-vault-pass```
+
+**Variable level encryption
+
+```ansible-vault encrypt_string -n nameofvariable```
+
+Ansible vault can also be applied to individual variables inside of a file. This will leave the rest of the file readable while encrypting on the requested variable.  The rekeying is not avaiable when using variable levelencryption. The above command will give you an encrypted variable which you can use inside of your variable file.
 
 
 [Lab 1.2](/docs/LAB1.2-MAIN.md)
