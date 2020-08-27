@@ -1,4 +1,4 @@
-# Ansible Workshop Files
+# Ansible Workshop from Anywhere
 
 **This repo is currently a work in progress. I am working to port my workshop from a central student lecture (with pdfs) to a github repo based remote led instruction class using the students infrastructure .**
 
