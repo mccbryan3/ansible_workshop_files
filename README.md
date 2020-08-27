@@ -14,17 +14,16 @@ _____________________________________________
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
 |[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)<br> | Ansible Basic Info, terminology and important Ansible files |
-|[Lab 1.1 ](/docs/LAB1.1-MAIN.md) | Installing and configuring Ansible Engine |
-|[Lecture 1.2](/docs/LECTURE1.2-MAIN.md)| Connecting to inventory machines and privilege escalation |
-|[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configure Credentials for Inventory Hosts and encrypt variables with Ansible Vault |
+|[Lab 1.1 ](/docs/LAB1.1-MAIN.md) | Installing and configuring Ansible Engine and a look at basic a playbook |
+|[Lecture 1.2](/docs/LECTURE1.2-MAIN.md)| Connecting to inventory machines, privilege escalation and Ansible Vault |
+|[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for Inventory Hosts and basic Ansible Vault usage |
 _____________________________________________
 ### Domain-02
 Lecture 2<br>
-Lab 2<br>
-_____________________________________________
+Lab 2<br>ing_____________________________________________
 ### Domain-03
-Lecture 3<br>
-Lab 3<br>
+L and a look at basic a playbookecture 3<br>
+Labing 3<br>
 _____________________________________________
 ### Domain-04
 Lecture 4<br>
