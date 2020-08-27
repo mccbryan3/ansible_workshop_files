@@ -19,15 +19,11 @@ _____________________________________________
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
 _____________________________________________
 ### Domain-02
-Lecture 2<br>
-Lab 2<br>ing_____________________________________________
-### Domain-03
-L and a look at basic a playbookecture 3<br>
-Labing 3<br>
-_____________________________________________
-### Domain-04
-Lecture 4<br>
-Lab 4<br>
+| Subcontent Links | Subcontent Name |
+|------------|-----------------|
+|Lecture 2||
+|Lab 2||
+
 
 
 
