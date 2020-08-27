@@ -21,9 +21,7 @@ _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-|Lecture 2||
-|Lab 2||
-
-
+|Lecture 2.1||
+|Lab 2.1||
 
 
