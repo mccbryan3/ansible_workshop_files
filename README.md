@@ -1,6 +1,6 @@
 # Ansible Workshop Files
 
-**This repo is currently a work in progress. I am currentl working to port my workshop from a central student lecture (with pdfs) to a github repo based remote led instruction class using the students infrastructure .**
+**This repo is currently a work in progress. I am working to port my workshop from a central student lecture (with pdfs) to a github repo based remote led instruction class using the students infrastructure .**
 
 **This repo will contain all files required for my Ansible Workshop including course lecture, terminology and lab manuals.**
 
