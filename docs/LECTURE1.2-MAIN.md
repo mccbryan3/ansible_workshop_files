@@ -126,9 +126,12 @@ Here are some examples of using the ```ansible-vault``` command.
 
 **Variable level encryption**
 
-```ansible-vault encrypt_string -n nameofvariable```
+```ansible-vault encrypt_string 'string_to_be_encrypted' -n 'name_of_variable'```
 
-Ansible vault can also be applied to individual variables inside of a file. This will leave the rest of the file readable while encrypting on the requested variable.  The rekeying is not avaiable when using variable levelencryption. The above command will give you an encrypted variable which you can use inside of your variable file.
+Ansible vault can also be applied to individual variables inside of a file. This will leave the rest of the file readable while encrypting on the requested variable.  The rekeying is not avaiable when using variable levelencryption. The above command will give you an encrypted variable which you can use inside of your variable file. The encrypted variable will need to be set in the file using the !vault declaration as shown below.
 
+**Using ansible-vault with playbooks**
+
+When using variable files with ansible-playbook you will need to pass the vault password to the command. You can do this with a prompt using ```--ask-vault-pass``` or leverage a file or script to provide the password to the command using ```--vault-password-file```. If using a script the script should return only the vault password. 
 
 [Lab 1.2](/docs/LAB1.2-MAIN.md)
