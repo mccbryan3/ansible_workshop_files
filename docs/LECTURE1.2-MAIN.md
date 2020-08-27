@@ -124,7 +124,7 @@ Here are some examples of using the ```ansible-vault``` command.
 
 ```ansible-vault rekey varfile.yaml --ask-vault-pass```
 
-**Variable level encryption
+**Variable level encryption**
 
 ```ansible-vault encrypt_string -n nameofvariable```
 
