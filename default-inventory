@@ -1,11 +1,11 @@
 [win_nodes]
-win-vm01-01
+win-vm01-XX.yourdomain
 
 [lin_nodes]
-lin-vm01-01
+lin-vm01-XX.yourdomain
 
 [controllers]
-lin-ans01-01
+lin-ans01-XX.yourdomain
 
 [linux:children]
 lin_nodes
