@@ -107,7 +107,8 @@ Notice the module error for winrm and requests
 
 14.	Examine controller-config playbook
 ```
-cat pb.controller-config.yaml
+vim pb.controller-config.yaml
+
 ````
 These tasks only run on localhost as specified at the top of the playbook
 This will install our missing modules using pip.<br>
