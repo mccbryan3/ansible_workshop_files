@@ -31,6 +31,9 @@ and so on....
 
 ## Labs Content Summary
 
+These items will be installed and configured in the lab. The machines above should be fresh deployments before you begin.<BR>
+___Do not install software or configure OS manually___
+
 ### Install Ansible and configure the controller
 * Install git
 * Install vim
