@@ -87,7 +87,7 @@ ansible_become: True
 ```
 11. Change directory back to the root of the project and examine pb.touchrootfile.yaml playbook.
 ```
-cd..
+cd ..
 vim linux_lab/pb.touchrootfile.yaml
 ```
 12. Quit the playbook without writing and run the playbook.
