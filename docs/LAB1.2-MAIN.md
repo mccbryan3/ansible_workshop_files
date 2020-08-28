@@ -12,6 +12,8 @@ Before you begin check you working directory. You should be in the root Domain-0
 
 2. Open and view the linux_lab/pb.lab1.2-ansible-user.yaml file.
 
+```linux_lab/pb.lab1.2-ansible-user.yaml```
+
 The playbook starts with the play definition.
 
 Then moves onto the tasks.
