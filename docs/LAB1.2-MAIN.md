@@ -92,6 +92,8 @@ vim lab_linux/pb.touchrootfile.yaml
 ```
 12. Quit the playbook without writing and run the playbook.
 
+This playbook will attempt to create a file in the root users home directory to verify privilege escalation. 
+
 ```
 ansible-playbook -i inventory lab_linux/pb.touchrootfile.yaml
 ```
