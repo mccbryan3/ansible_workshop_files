@@ -20,7 +20,7 @@ ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 
 [all:vars]
-ansible_ssh_commen_args='-o StrictHostKeyChecking=no'
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 
 
