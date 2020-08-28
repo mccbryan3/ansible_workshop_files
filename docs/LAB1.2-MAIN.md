@@ -5,6 +5,9 @@
 
 Before you begin check you working directory. You should be in the root Domain-01.
 
+```pwd``` should say ```/root/ansible_workshop_files/Domain-01```
+
+
 1. Verify your inventory file is configured correctly and that the hostnames are resolvable or you have 'ansible_host=' variable set.
 
 2. Open and view the linux_lab/pb.lab1.2-ansible-user.yaml file.
