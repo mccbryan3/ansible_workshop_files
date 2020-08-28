@@ -68,7 +68,7 @@ ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 Be aware of the ini structure.<br>
 Group variables are also specified in this file.
 
-10. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
+10. Using vim, modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
 ___If you do not have name resolution please notify the instructor to help specify ansible_host variable___
 
 example of ansible_host variable...
