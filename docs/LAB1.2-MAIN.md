@@ -10,9 +10,9 @@ Before you begin check you working directory. You should be in the root Domain-0
 
 1. Verify your inventory file is configured correctly and that the hostnames are resolvable or you have 'ansible_host=' variable set.
 
-2. Open and view the linux_lab/pb.lab1.2-ansible-user.yaml file.
+2. Open and view the lab_linux/pb.lab1.2-ansible-user.yaml file.
 
-```linux_lab/pb.lab1.2-ansible-user.yaml```
+```lab_linux/pb.lab1.2-ansible-user.yaml```
 
 The playbook starts with the play definition.
 
@@ -88,7 +88,7 @@ ansible_become: True
 11. Change directory back to the root of the project and examine pb.touchrootfile.yaml playbook.
 ```
 cd ..
-vim linux_lab/pb.touchrootfile.yaml
+vim lab_linux/pb.touchrootfile.yaml
 ```
 12. Quit the playbook without writing and run the playbook.
 
