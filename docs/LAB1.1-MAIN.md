@@ -80,13 +80,13 @@ lin-vm01-XX.yourdomain ansible_host=192.168.0.100
 11. List hosts from the inventory file using --list-hosts  parameters
 
 ```
-ansible all -i default-inventory --list-hosts
+ansible all -i inventory --list-hosts
 ```
 
 12. List groups of hosts in teh inventory file
 
 ```
-ansible linux -i default-inventory --list-hosts
+ansible linux -i inventory --list-hosts
 
 ```
 
