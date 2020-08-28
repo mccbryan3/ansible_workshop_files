@@ -93,17 +93,22 @@ ansible linux -i inventory --list-hosts
 13. Run setup command on win_nodes hosts
 
 Ansible adhoc commands are in the format below.<br>
-```
+
 ansible [inventory_pattern] -m [module] -a "[module options]"
+
 ```
-We are also specifying the inventory file with the -i option
+ansible windows -m setup -i inventory
+
+```
+We are also specifying the inventory file with the -i option<br><br>
 ![](/images/lab1-winrm-error.png)
 
 Notice the module error for winrm and requests
 
 14.	Examine controller-config playbook
 ```
-cat pb.controller-config.yaml
+vim pb.controller-config.yaml
+
 ````
 These tasks only run on localhost as specified at the top of the playbook
 This will install our missing modules using pip.<br>
@@ -115,13 +120,13 @@ Python modules installed here are pywinrm for windows machine support, pyvmomi f
 
 15. Run the playbook
 ```
-ansible-playbook controller-pre-reqs.yml
+ansible-playbook pb.controller-config.yaml
 ```
 Examine the output
 16. Rerun the setup command on the windows host group
 
 ```
-ansible windows -i default-inventory -m setup
+ansible windows -i inventory -m setup
 ```
 Examine the new message
 
