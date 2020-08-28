@@ -20,7 +20,7 @@ Then moves onto the tasks.
 
 First we create the ansible-user while generating ssh keys for this user.
 
-Then we mvoe onto copying the local users public key into the authorized_keys file on the remote machines to enable passwordless remoting.
+Then we move onto copying the local users public key into the authorized_keys file on the remote machines to enable passwordless remoting.
 
 ![](/images/lab1.2-ansible-user.png)
 
