@@ -24,17 +24,19 @@ Notice the ansible version, the default config file path and the python version 
 
 6.	Clone the lab repo local
 ```
-git clone git@github.com:mccbryan3/ansible_workshop_files.git
+git clone https://github.com/mccbryan3/ansible_workshop_files.git
 ```
 7. Change directories in the ansible_workshop_files directory
 ```
 cd ansible_workshop_files
 ```
 
-8. Copy your default-inventory file and name it inventory to make a "backup"
+8. Copy your default-inventory file into the Domain-01 directory naming it inventory and cd into the Domain-01 directory
 
 ```
-cp default-inventory inventory
+cp default-inventory Domain-01/inventory
+
+cd Domain-01
 ```
 
 9. Cat the inventory file and verify
