@@ -93,8 +93,12 @@ ansible linux -i inventory --list-hosts
 13. Run setup command on win_nodes hosts
 
 Ansible adhoc commands are in the format below.<br>
-```
+
 ansible [inventory_pattern] -m [module] -a "[module options]"
+
+```
+ansible windows -m setup -i inventory
+
 ```
 We are also specifying the inventory file with the -i option
 ![](/images/lab1-winrm-error.png)
