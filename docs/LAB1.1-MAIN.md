@@ -24,17 +24,19 @@ Notice the ansible version, the default config file path and the python version 
 
 6.	Clone the lab repo local
 ```
-git clone git@github.com:mccbryan3/ansible_workshop_files.git
+git clone https://github.com/mccbryan3/ansible_workshop_files.git
 ```
 7. Change directories in the ansible_workshop_files directory
 ```
 cd ansible_workshop_files
 ```
 
-8. Copy your default-inventory file and name it inventory to make a "backup"
+8. Copy your default-inventory file into the Domain-01 directory naming it inventory and cd into the Domain-01 directory
 
 ```
-cp default-inventory inventory
+cp default-inventory Domain-01/inventory
+
+cd Domain-01
 ```
 
 9. Cat the inventory file and verify
@@ -66,7 +68,7 @@ ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 Be aware of the ini structure.<br>
 Group variables are also specified in this file.
 
-10. Modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
+10. Using vim, modify the default inventory file to specify your student number and change your to match the required FQDN for name resolution<br>
 ___If you do not have name resolution please notify the instructor to help specify ansible_host variable___
 
 example of ansible_host variable...
@@ -78,13 +80,13 @@ lin-vm01-XX.yourdomain ansible_host=192.168.0.100
 11. List hosts from the inventory file using --list-hosts  parameters
 
 ```
-ansible all -i default-inventory --list-hosts
+ansible all -i inventory --list-hosts
 ```
 
 12. List groups of hosts in teh inventory file
 
 ```
-ansible linux -i default-inventory --list-hosts
+ansible linux -i inventory --list-hosts
 
 ```
 
