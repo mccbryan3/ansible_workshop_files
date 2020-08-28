@@ -30,7 +30,7 @@ First run the --syntax-check then run the playbook.<br>
 
 The playbook should prompt for password of the root user.
 
-***In this playbook we are configuruing the ansible-user in the sudoers file to have access to run all commands wihtout a password prompt***
+***In this playbook we are configuring the ansible-user in the sudoers file to have access to run all commands wihtout a password prompt***
 
 ```
 ansible-playbook -i inventory lab_linux/pb.lab1.2-ansible-user.yaml --user root --ask-pass --syntax-check
@@ -53,10 +53,9 @@ git clone https://github.com/mccbryan3/ansible_workshop_files.git
 6. Exit out of ansible-user and copy your inventory file then su back to ansible-user
 
 ```
-exit
-cp /root/ansible_workshop_files/inventory /home/ansible-user/ansible_workshop_files/
-su - ansible-user
-cd ansible_workshop_files
+sudo cp /root/ansible_workshop_files/Domain-01/inventory /home/ansible-user/ansible_workshop_files/Domain-01
+cd ansible_workshop_files/Domain-01/
+
 ```
 
 ** Recheck your inventory file **
