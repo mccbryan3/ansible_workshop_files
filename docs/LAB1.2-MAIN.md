@@ -55,7 +55,6 @@ git clone https://github.com/mccbryan3/ansible_workshop_files.git
 ```
 sudo cp /root/ansible_workshop_files/Domain-01/inventory /home/ansible-user/ansible_workshop_files/Domain-01
 cd ansible_workshop_files/Domain-01/
-
 ```
 
 ** Recheck your inventory file **
