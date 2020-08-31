@@ -17,13 +17,14 @@ _____________________________________________
 |[Lab 1.1 ](/docs/LAB1.1-MAIN.md) | Installing and configuring Ansible Engine and a look at basic a playbook |
 |[Lecture 1.2](/docs/LECTURE1.2-MAIN.md)| Connecting to inventory machines, privilege escalation and Ansible Vault |
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
+|[Lecture 1.3](/docs/LECTURE2.1-MAIN.md)||
+|[Lab 1.3](/docs/LAB2.1-MAIN.md)||
+|[Lecture 1.4](/docs/LECTURE2.2-MAIN.md)||
+|[Lab 1.4](/docs/LAB2.2-MAIN.md)||
 _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-|[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)||
-|[Lab 2.1](/docs/LAB2.1-MAIN.md)||
-|[Lecture 2.2](/docs/LECTURE2.2-MAIN.md)||
-|[Lab 2.2](/docs/LAB2.2-MAIN.md)||
+
 
 
