@@ -12,7 +12,7 @@ Before you begin check you working directory. You should be in the root Domain-0
 
 2. Open and view the lab_linux/pb.lab1.2-ansible-user.yaml file.
 
-```lab_linux/pb.lab1.2-ansible-user.yaml```
+```vim lab_linux/pb.lab1.2-ansible-user.yaml```
 
 The playbook starts with the play definition.
 
