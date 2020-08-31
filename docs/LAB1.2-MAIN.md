@@ -106,6 +106,10 @@ The output should look like the following.
 
 ![](/images/lab1.2-touchroot1.png)
 
+Verify that the newfile1 was created in the root home directory.
+
+```sudo ls -l /root/```
+
 ### Windows Configuration
 
 Our Windows guests will need variable assignment for the username and password to use over winrm
