@@ -80,7 +80,7 @@ The second two register and **failed_when** are optional. These are best practic
 
 yum, copy, service, command, shell, etc……
 ```
-ansible-doc task 
+ansible-doc module
 ```
 ...for more information on tasks
 
