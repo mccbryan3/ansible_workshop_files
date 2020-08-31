@@ -25,12 +25,14 @@ __Super Important__
     * Modules are written in standard scripting languages and are used to execute code either remotely or locally based on instructions set syntax provided in the modules.  These instructions are provided in the YAML syntax and written in the format described by the author of the module in the ansible-doc -s output.
 * YAML
     * A markup language and also a data-oriented language that is considered more human readable than most languages. Python indentation (2 spaces), Perl based data types key value pair based. Used in configuration files and expressed in a colon-based style for key value pair assignment.
+*	Hosts
+    * Hosts are remote machines where module tasks are executed. These hosts exit in an inventory file and are contacted via either ssh for unix and linux and winrm over https for windows.
 *	Playbook
     *	Playbooks are YAML files consisting of plays. Plays are instruction sets known as tasks gathered in a single file which specify information used to execute operations. The playbook contains information on where the operations of the tasks are to be performed as well as other play specific information. 
 *	Tasks
     * Tasks are specified top to bottom in a play. These tasks use ansible modules or collections to execute specific operations on the hosts specified in the play. 
 *	Inventory
-    * Inventory consists of several hosts either provided as standalone hosts or grouped together using group tags in a file specified in the ansible.cfg file.
+    * Inventory consists of several **hosts** either provided as standalone hosts or grouped together using group tags in a file specified in the ansible.cfg file.
 *	Roles
     * Roles are written using playbooks, tasks, variables and files in a specific directory structure. Roles are built to be used as reusable operations that may take many tasks and may also have conditions for operations. The goal of most reusable operations should be an Ansible Role. You can install and use collections through Ansible Galaxy
 *	Collections
@@ -56,5 +58,11 @@ __Super Important__
         * Default location /etc/ansible/host_vars and /etc/ansible/group_vars
     * Group vars and host var files should be named the name of the group or host respectively
         * These files can be located in the /etc/ansible or the project directory
+        
+## Ansible Controller
+
+The Ansible Controller is where we will be developing playbooks and executing them with the ```ansible-playbook``` command. The Ansible controller itself is only an interpreter of the ansible plays and uses modules as well as the cofiguration file mentioned above to, for the most part, remotely execute plays on hosts. The ansible controller holds the ansible binaries for excuting plays, working with inventory and managing parameters.
+
+Configuring the Ansible Controller... 
 
 [Lab-1.1](/docs/LAB1.1-MAIN.md)
