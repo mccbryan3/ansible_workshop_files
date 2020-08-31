@@ -13,7 +13,7 @@ _____________________________________________
 ### Domain-01 - Ansible controller and host connection configuration
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-|[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)<br> | Ansible Basic Info, terminology and important Ansible files |
+|[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)| Ansible Basic Info, terminology and important Ansible files |
 |[Lab 1.1 ](/docs/LAB1.1-MAIN.md) | Installing and configuring Ansible Engine and a look at basic a playbook |
 |[Lecture 1.2](/docs/LECTURE1.2-MAIN.md)| Connecting to inventory machines, privilege escalation and Ansible Vault |
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
@@ -21,7 +21,9 @@ _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-|Lecture 2.1||
-|Lab 2.1||
+|[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)||
+|[Lab 2.1](/docs/LAB2.1-MAIN.md)||
+|[Lecture 2.2](/docs/LECTURE2.2-MAIN.md)||
+|[Lab 2.2](/docs/LAB2.2-MAIN.md)||
 
 
