@@ -112,7 +112,7 @@ Verify that the newfile1 was created in the root home directory.
 
 ![](/images/lab1.2-touchroot1-verify.png)
 
-Assuming file exists in the root home 
+Assuming file exists in the root home diretctory as shown above, you are now using privilege escalation from ansible-user and becoming root on the hosts.
 
 ### Windows Configuration
 
