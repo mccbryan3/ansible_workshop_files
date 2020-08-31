@@ -57,7 +57,7 @@ sudo cp /root/ansible_workshop_files/Domain-01/inventory /home/ansible-user/ansi
 cd ansible_workshop_files/Domain-01/
 ```
 
-** Recheck your inventory file **
+**Recheck your inventory file**
 
 7. Run setup on the linux hosts to verify connectivity
 
@@ -65,7 +65,12 @@ cd ansible_workshop_files/Domain-01/
 ansible linux -i inventory -m setup
 ```
 
-**Configure privilege escalation variables for the linux ansible-user
+You should get a bunch of green and ansible_facts should fly by on your screen like so...<br>
+
+![](images/lab1.2-liinux-setup.png)
+
+
+**Configure privilege escalation variables for the linux ansible-user**
 
 8. Create the group_vars directory and cd into the directory
 ```
