@@ -108,7 +108,11 @@ The output should look like the following.
 
 Verify that the newfile1 was created in the root home directory.
 
-```sudo ls -l /root/```
+```ansible linux -a 'ls -l /root/' -i inventory```
+
+![](/images/lab1.2-touchroot1-verify.png)
+
+Assuming file exists in the root home 
 
 ### Windows Configuration
 
