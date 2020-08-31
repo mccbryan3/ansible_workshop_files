@@ -1,4 +1,4 @@
-# Ansible Basics
+# LECTURE1.1 - Ansible Basics
 
 ## Importance of Source Control Management
 __Super Important__
