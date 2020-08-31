@@ -103,7 +103,7 @@ ansible windows -m setup -i inventory
 We are also specifying the inventory file with the -i option<br><br>
 ![](/images/lab1-winrm-error.png)
 
-Notice the module error for winrm and requests
+Notice the module error for winrm and requests. The windows Ansible modules require the pywinrm python module which will need to be installed on the controller. 
 
 14.	Examine controller-config playbook
 ```
