@@ -67,7 +67,7 @@ ansible linux -i inventory -m setup
 
 You should get a bunch of green and ansible_facts should fly by on your screen like so...<br>
 
-![](images/lab1.2-liinux-setup.png)
+![](/images/lab1.2-linux-setup.png)
 
 
 **Configure privilege escalation variables for the linux ansible-user**
@@ -105,6 +105,14 @@ ansible-playbook -i inventory lab_linux/pb.touchrootfile.yaml
 The output should look like the following.
 
 ![](/images/lab1.2-touchroot1.png)
+
+Verify that the newfile1 was created in the root home directory.
+
+```ansible linux -a 'ls -l /root/' -i inventory```
+
+![](/images/lab1.2-touchroot1-verify.png)
+
+Assuming file exists in the root home 
 
 ### Windows Configuration
 
