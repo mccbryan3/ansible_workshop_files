@@ -10,6 +10,8 @@
    * lin-vm01-XX
 * One windows VM (windows 2019 - **WORKGROUP only - non domain joined**)
    * win-vm01-XX
+   
+**Currently the lab is being tested with Ansible 2.9.11**
 
 The lab machines naming is very important. The names should be defined as shown above with the "XX" beign replaced by two digits starting from '01' and icrementing based on the number of students in the lab. This will line up directly to student numbers as we progeress through the labs.
 
