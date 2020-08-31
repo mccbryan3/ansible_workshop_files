@@ -67,7 +67,7 @@ ansible linux -i inventory -m setup
 
 You should get a bunch of green and ansible_facts should fly by on your screen like so...<br>
 
-![](images/lab1.2-linux-setup.png)
+![](/images/lab1.2-linux-setup.png)
 
 
 **Configure privilege escalation variables for the linux ansible-user**
