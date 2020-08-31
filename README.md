@@ -10,7 +10,7 @@ _____________________________________________
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main)<br>
 [Ansible Workshop Playbook Basics](/docs/PLAY-BASICS-MAIN.md)<br>
 _____________________________________________
-### Domain-01
+### Domain-01 - Ansible controller and host connection configuration
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
 |[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)<br> | Ansible Basic Info, terminology and important Ansible files |
