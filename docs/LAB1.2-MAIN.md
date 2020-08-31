@@ -124,7 +124,7 @@ There are a lot of options here however so we dont have to specify these in ever
 
 1.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
 ```
-vim group_vars/windwows.yaml
+vim group_vars/windows.yaml
 ````
 3.	Add the windows ansible user credential variables to the file and save (stars should be replaced by your windows machine password)
 
