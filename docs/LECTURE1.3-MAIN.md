@@ -1,1 +1,1 @@
-# Ansible Basics - Create a Ansible Confiuration file in the working project directory
+# Ansible Basics - Create an Ansible Configuration file for the project
