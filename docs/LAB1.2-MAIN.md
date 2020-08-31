@@ -150,11 +150,15 @@ Encryption successful
 
 6. Rerun your ansible setup module on the windows guests providing the --ask-vault-pass parameter
 
-Provide the vault password when prompted.
+Provide the vault password when prompted and you should be given the windows ansible_facts again using the encrypted variable file.
 
 ```
 ansible windows -i inventory -m setup --ask-vault-pass
 ```
+
+![](/images/lab1.2-windows-setup.png)
+
+
 
 **End of Lab1.2**
 
