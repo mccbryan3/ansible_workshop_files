@@ -134,4 +134,6 @@ Ansible vault can also be applied to individual variables inside of a file. This
 
 When using variable files with ansible-playbook you will need to pass the vault password to the command. You can do this with a prompt using ```--ask-vault-pass``` or leverage a file or script to provide the password to the command using ```--vault-password-file```. If using a script the script should return only the vault password. 
 
+In the next lab we will be configuring the Ansible Controller and in particular the working project directory for remote machine management...
+
 [Lab 1.2](/docs/LAB1.2-MAIN.md)
