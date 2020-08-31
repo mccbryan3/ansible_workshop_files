@@ -112,7 +112,7 @@ Verify that the newfile1 was created in the root home directory.
 
 ![](/images/lab1.2-touchroot1-verify.png)
 
-Assuming file exists in the root home 
+Assuming file exists in the root home diretctory as shown above, you are now using privilege escalation from ansible-user and becoming root on the hosts.
 
 ### Windows Configuration
 
@@ -120,11 +120,11 @@ Our Windows guests will need variable assignment for the username and password t
 
 There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project. We will also be using the dedicated file to encrypt our password using ansible-vault.
 
-***Be sure you are in the ansible_workshop_files directory***
+***Be sure you are in the ansible_workshop_files/Domain-01 directory***
 
 1.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
 ```
-vim group_vars/windwows.yaml
+vim group_vars/windows.yaml
 ````
 3.	Add the windows ansible user credential variables to the file and save (stars should be replaced by your windows machine password)
 
@@ -150,11 +150,15 @@ Encryption successful
 
 6. Rerun your ansible setup module on the windows guests providing the --ask-vault-pass parameter
 
-Provide the vault password when prompted.
+Provide the vault password when prompted and you should be given the windows ansible_facts again using the encrypted variable file.
 
 ```
 ansible windows -i inventory -m setup --ask-vault-pass
 ```
+
+![](/images/lab1.2-windows-setup.png)
+
+
 
 **End of Lab1.2**
 
