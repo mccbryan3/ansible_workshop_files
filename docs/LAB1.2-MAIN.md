@@ -120,7 +120,7 @@ Our Windows guests will need variable assignment for the username and password t
 
 There are a lot of options here however so we dont have to specify these in every playbook and so they also apply to the entire windwos host group we will be using group_vars in this case. Specifically located in the group_vars directory of the working project. We will also be using the dedicated file to encrypt our password using ansible-vault.
 
-***Be sure you are in the ansible_workshop_files directory***
+***Be sure you are in the ansible_workshop_files/Domain-01 directory***
 
 1.	Create a file named after your inventory group.yml (windows.yml) and open it in an editor
 ```
