@@ -8,7 +8,7 @@ This workshop is also built to work as a self-paced workshop providing you meet 
 
 _____________________________________________
 ### Preface and Basics-101
-[Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)<br>
+[Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics) - **Workshop information**<br>
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main) - **Lab Requirements for the workshop**<br>
 _____________________________________________
 ### Domain-01 - Ansible Basics
