@@ -7,7 +7,7 @@
 _____________________________________________
 ### Preface and Basics-101
 [Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)<br>
-[Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main)<br>
+[Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main) - **Lab Requirements for the workshop**<br>
 [Ansible Workshop Playbook Basics](/docs/PLAY-BASICS-MAIN.md)<br>
 _____________________________________________
 ### Domain-01 - Ansible controller and host connection configuration
