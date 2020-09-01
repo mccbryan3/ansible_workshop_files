@@ -45,8 +45,9 @@ A simple play in a playbook may look like so...
         state: touch
 ```
 
-In this example we name the play we...
+In this example we...
 
+* Name the play
 * Define the hosts that the play will execute on
 * Use become for privilege escalation
 * Use the ansible-user account to execute the play on the remote hosts
