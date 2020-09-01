@@ -41,6 +41,8 @@ ansible-playbook pb.controller-config.yaml
 
 ```ping win-vm01-01.yourdomain```<br>
 
-**End of Lab1.3**
+In this lab we used the ```win_firewall_rule``` module to open firewall ports on our windows lab machine.
+
+**End of Lab1.4**
 
 [Return to Main](/README.md)
