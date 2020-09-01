@@ -1,4 +1,4 @@
-# LECTURE1.3 - Create an examine an Ansible Configuration file
+# LECTURE1.3 - Ansible configuration and Inventory Files
 
 ## ansible.cfg
 
