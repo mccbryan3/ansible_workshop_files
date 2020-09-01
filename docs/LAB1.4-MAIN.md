@@ -1,6 +1,6 @@
 # LAB 1.4 - Writing a basic playbook
 
-1. Verify your working directory is Domain-01.
+1. Verify your working directory is Domain-01 and you are ansible-user.
 ```
 pwd
 whoami
@@ -14,6 +14,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 ```
 ansible-playbook pb.controller-config.yaml
 ```
+3. Ping your windows2019 server
 
 
 **End of Lab1.3**
