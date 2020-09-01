@@ -44,3 +44,12 @@ A simple play in a playbook may look like so...
         path: /root/newfile
         state: touch
 ```
+
+In this example we name the play we...
+
+* Define the hosts that the play will execute on
+* Use become for privilege escalation
+* Use the ansible-user account to execute the play on the remote hosts
+* Confirm that we want to gather facts
+* Define our tasks heading
+* Define a task using the file module to create a file
