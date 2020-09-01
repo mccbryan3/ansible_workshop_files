@@ -67,77 +67,6 @@ In this example we...
 * Confirm that we want to gather facts
 * Define our tasks heading
 * Define a task using the file module to create a file
-
-### Basic on Playbooks
-
-**Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yml file extension.
-
-**Indentation is super important and the indention should be configured in vim. The indentation is based on two spaces.
-
-___For better vim editing with yaml add the following to the ~/.vimrc file___
-
-```
-autocmd FileType yaml setlocal ai ts=2 sw=2 et
-```
-___you can use cursorcolumn to check indentation although I would save this for the command mode in vim___
-```
-set cursorcolumn
-```
-___Details on the autocmd___
-```
-#ai = auto indent<br>
-#ts = tab stop<br>
-#sw = Shift Width<br>
-#et = expansetab<br>
-```
-
-* Check syntax before starting
-
-ansible-playbook playbook.yml –syntax-check
-
-* Dry run the playbook
-
-ansible-playbook playbook.yml -C
-
--v for verbose.. Up to 4v's
-
-ansible-playbook playbook.yml "-vvvv"
-
-* Starts with three dashes "—" and can end with three dots "…"
-
-Sample playbook with name, hosts and tasks
-
-```
----
-- name: Playbook description
-  hosts: hosts
-  tasks:
-    - first
-    - second
-    - third
-```
-* Playbook tasks are ran in order
-
-* Example playbook with task shown below
-
-![](/images/playbook-example-task.png)
-
-### "Print the output now" task details..
-
-* Task uses the command module
-* Registers the output of the module to the command_result variable
-* Uses this variable to check the result and determine if it has failed
-
-The second two register and **failed_when** are optional. These are best practice when working with the command module especially. Since the command module itself does not consider the command that is passed failing you will want to check the output for something to verify that the command succeeded or failed. You can also do something similar with **changed_when** for command and shell.
-
-### Basic Tasks..
-
-yum, copy, service, command, shell, etc……
-```
-ansible-doc module
-```
-...for more information on tasks
-
 ### Playbooks can have multiple plays
 
 A multiple play playbook could look something like the below.
@@ -172,3 +101,62 @@ A multiple play playbook could look something like the below.
 ```
 
 In the playbook above we have two plays defined. One play runs on the linux group and the second runs on a windows group. Each play has a set of play definitions to allow the play to execute as expected.
+
+### Basic file editing for playbooks
+
+**Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yml file extension.**
+
+**Indentation is super important and the indention should be configured in vim. The indentation is based on two spaces.**
+
+___For better vim editing with yaml add the following to the ~/.vimrc file___
+
+```
+autocmd FileType yaml setlocal ai ts=2 sw=2 et
+```
+___you can use cursorcolumn to check indentation although I would save this for the command mode in vim___
+```
+set cursorcolumn
+```
+___Details on the autocmd___
+```
+#ai = auto indent<br>
+#ts = tab stop<br>
+#sw = Shift Width<br>
+#et = expansetab<br>
+```
+
+* Check syntax before starting
+
+```ansible-playbook playbook.yml –syntax-check```
+
+* Dry run the playbook
+
+```ansible-playbook playbook.yml -C```
+
+-v for verbose.. Up to 4v's
+
+```ansible-playbook playbook.yaml -vvvv```
+
+* Starts with three dashes "—" and can end with three dots "…"
+
+* Playbook tasks are ran in order
+
+* Example playbook with task shown below
+
+![](/images/playbook-example-task.png)
+
+### "Print the output now" task details..
+
+* Task uses the command module
+* Registers the output of the module to the command_result variable
+* Uses this variable to check the result and determine if it has failed
+
+The second two register and **failed_when** are optional. These are best practice when working with the command module especially. Since the command module itself does not consider the command that is passed failing you will want to check the output for something to verify that the command succeeded or failed. You can also do something similar with **changed_when** for command and shell.
+
+### Basic Tasks..
+
+yum, copy, service, command, shell, etc……
+```
+ansible-doc module
+```
+...for more information on tasks
