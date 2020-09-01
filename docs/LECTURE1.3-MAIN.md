@@ -53,7 +53,7 @@ server1.domain.com
 192.168.1.111
 ```
 
-If you would like to use a name for a host but cannot resolve the name you can specify the ```ansible_host``` variable after the name to tell ansible to use that as the connection "name" for the host during play execution.
+If you would like to use a name for a host but cannot resolve the name you can specify the ```ansible_host``` variable after the name to tell ansible to use that as the connection "name" for the host during play execution. Any host variable can be assigned in this manner by appending the variable inline.
 ```
 server1 ansible_host=192.168.1.111
 ```
@@ -61,6 +61,8 @@ server1 ansible_host=192.168.1.111
 Groups can be members of groups as well using the ```[group:children]``` stanza. As you may have noticed in our lab we are adding groups into groups to allow us to run plays on a larger set or smaller set of host types.
 
 ![](/images/lecture1.3-inventory-children.png)
+
+This allows us to use the ```[group:vars]``` to assign variables to our groups. This more likely would be something you would use in group_vars in your project but this is a valid place to use variables. In Ansible Tower group variables are assigned to the groups in the inventory and this is very much the same technique.
 
 ![](/images/lecture1.3-inventory-vars.png)
 
