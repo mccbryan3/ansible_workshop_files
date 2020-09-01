@@ -22,7 +22,7 @@ _____________________________________________
 |[Lecture 1.3](/docs/LECTURE1.3-MAIN.md)| The Ansible Configuration and Inventory files|
 |[Lab 1.3](/docs/LAB1.3-MAIN.md)| Exploring the Ansible Configuration and Inventory files|
 _____________________________________________
-### Domain-02
+### Domain-02 - Plays, playbooks, variables and templating
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
 |[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)| Exploring the playbook syntax|
