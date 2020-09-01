@@ -156,11 +156,13 @@ The second two register and **failed_when** are optional. These are best practic
 
 yum, copy, service, command, shell, etc…
 
-Use the ansible-doc command on specific modules to get information about the module. The ansible-doc command can also be ran with the ```-s``` parameter to get a "snippet" exmaple of the modules usage.
+Use the ```ansible-doc``` command on specific modules to get information about the module. 
+
+The ansible-doc command can also be ran with the ```-s``` parameter to get a "snippet" exmaple of the modules usage.
 
 ```
 ansible-doc module
 ```
-Let's write a playbook or two.
+Let's head to lab 1.4 to write a playbook or two.
 
 [Lab 1.4](/docs/LAB1.4-MAIN.md)
