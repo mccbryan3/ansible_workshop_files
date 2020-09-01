@@ -18,8 +18,6 @@
         state: present
         create: yes
         line: autocmd FileType yaml setlocal ai ts=2 sw=2 et
-        owner: root
-        mode: 0644
     
     - name: Configure alias for vim in bashrc
       lineinfile:
