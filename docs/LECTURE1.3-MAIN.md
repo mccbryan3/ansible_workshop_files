@@ -1,4 +1,4 @@
-# LECTURE1.3 - Create an examine an Ansible Configuration file
+# LECTURE1.3 - Ansible configuration and Inventory Files
 
 ## ansible.cfg
 
@@ -53,7 +53,7 @@ server1.domain.com
 192.168.1.111
 ```
 
-If you would like to use a name for a host but cannot resolve the name you can specify the ```ansible_host``` variable after the name to tell ansible to use that as the connection "name" for the host during play execution.
+If you would like to use a name for a host but cannot resolve the name you can specify the ```ansible_host``` variable after the name to tell ansible to use that as the connection "name" for the host during play execution. Any host variable can be assigned in this manner by appending the variable inline.
 ```
 server1 ansible_host=192.168.1.111
 ```
@@ -62,7 +62,15 @@ Groups can be members of groups as well using the ```[group:children]``` stanza.
 
 ![](/images/lecture1.3-inventory-children.png)
 
-![]/images/lecture1.3-inventory-vars.png)
+This allows us to use the ```[group:vars]``` to assign variables to our groups. This more likely would be something you would use in group_vars in your project but this is a valid place to use variables. In Ansible Tower group variables are assigned to the groups in the inventory and this is very much the same technique.
+
+![](/images/lecture1.3-inventory-vars.png)
+
+Dynamic inventory files can also be used to define inventory. These are usually scripts that define the inventory hosts and pull the inventory from a third-party solution including but not limited to AWS EC2 instances and VMware and other cloud and on-prem instances.
+
+More information about dynamnic inventory can be found [here](https://docs.ansible.com/ansible/2.3/intro_dynamic_inventory.html)
+
+All inventory should have the ability to be listed using the ```--list-hosts``` parameter from the command line.
 
 
-
+[Lab-1.3](/docs/LAB1.3-MAIN.md)
