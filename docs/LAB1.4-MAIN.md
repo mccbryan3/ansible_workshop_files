@@ -45,7 +45,7 @@ ansible-playbook pb.controller-config.yaml
 
 ```ansible-playbook pb.win-firewall-01.yaml```
 
-7. Retry the ping to your windows host.
+9. Retry the ping to your windows host.
 
 ```ping win-vm01-01.yourdomain```<br>
 
