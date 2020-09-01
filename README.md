@@ -12,7 +12,7 @@ _____________________________________________
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main) - **Lab Requirements for the workshop**<br>
 [Ansible Workshop Playbook Basics](/docs/PLAY-BASICS-MAIN.md)<br>
 _____________________________________________
-### Domain-01 - Ansible controller and host connection configuration
+### Domain-01 - Ansible Basics
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
 |[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)| Ansible Basic Info, terminology and important Ansible files |
@@ -21,13 +21,14 @@ _____________________________________________
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
 |[Lecture 1.3](/docs/LECTURE1.3-MAIN.md)| The Ansible Configuration and Inventory files|
 |[Lab 1.3](/docs/LAB1.3-MAIN.md)| Exploring the Ansible Configuration and Inventory files|
+|[Lecture 1.4](/docs/LECTURE1.4-MAIN.md)| Exploring the playbook syntax|
+|[Lab 1.4](/docs/LAB1.4-MAIN.md)| Writing basic playbooks|
+|[Lecture 1.5](/docs/LECTURE1.5-MAIN.md)| Exploring variables and conditions |
+|[Lab 1.5](/docs/LAB1.5-MAIN.md)| Using variables and conditions in playbooks |
 _____________________________________________
-### Domain-02 - Plays, playbooks, variables and templating
+### Domain-02
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-|[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)| Exploring the playbook syntax|
-|[Lab 2.1](/docs/LAB2.1-MAIN.md)| Writing basic playbooks|
-|[Lecture 2.2](/docs/LECTURE2.2-MAIN.md)| Exploring variables and conditions |
-|[Lab 2.2](/docs/LAB2.2-MAIN.md)| Using variables and conditions in playbooks |
+
 
 
