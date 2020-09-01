@@ -10,23 +10,22 @@ Put simply, playbooks are files containing Ansible plays. These plays are built 
 
 Playbooks are written in YAML syntax. This allows for you to define your tasks in a declarative easy to read manner.
 
+* Playbooks and YAML in general use a python type indentation to signify hierarchy.
+* Playbooks may consists of multiple plays.
+* Variables do not persist through plays.
+* Playbooks will run by default as the executing user.
+
 Playbooks are executed using the ```ansible-playbook``` binary.
 
 Playbooks may contain many plays. 
 
 ## Plays
 
-Plays are defined by the specification of which inventory the play is set to execute, variables, and tasks and names. This playbook consists of YAML and is written in YAML tags. 
-YAML starts with three dots and uses the yml or yaml extension in Ansible.
-
 **Play structure**
 
-![](/images/play-structure.png)
+The below playbook shows, graphically the basic structure of a playbook.
 
-* Playbooks and YAML in general use a python type indentation to signify hierarchy.
-* Playbooks may consists of multiple plays.
-* Variables do not persist through plays.
-* Playbooks will run by default as the executing user.
+![](/images/play-structure.png)
 
 Plays are defined by a play definition heading. 
 
