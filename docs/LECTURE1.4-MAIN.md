@@ -19,9 +19,7 @@ Playbooks are executed using the ```ansible-playbook``` binary.
 
 Playbooks may contain many plays. 
 
-## Plays
-
-**Play structure**
+## Play structure
 
 The below playbook shows, graphically the basic structure of a playbook.
 
@@ -67,6 +65,7 @@ In this example we...
 * Confirm that we want to gather facts
 * Define our tasks heading
 * Define a task using the file module to create a file
+
 ### Playbooks can have multiple plays
 
 A multiple play playbook could look something like the below.
@@ -160,3 +159,5 @@ yum, copy, service, command, shell, etc……
 ansible-doc module
 ```
 ...for more information on tasks
+
+[Lab 1.4](/docs/LAB1.4-MAIN.md)
