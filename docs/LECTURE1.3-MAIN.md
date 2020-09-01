@@ -42,5 +42,27 @@ Hosts may be defined using patterns. This is advantageous if you have many hosts
 
 ![](/images/lecture1.3-inventory-pattern.png)
 
+Any host defined should be contactable. That is either by the name defined as the host or by using an IP address as the host name.
+
+All of the below definitions are correct if the ansible-controller can contact them be the defined names.
+
+```
+[servers]
+server1
+server1.domain.com
+192.168.1.111
+```
+
+If you would like to use a name for a host but cannot resolve the name you can specify the ```ansible_host``` variable after the name to tell ansible to use that as the connection "name" for the host during play execution.
+```
+server1 ansible_host=192.168.1.111
+```
+
+Groups can be members of groups as well using the ```[group:children]``` stanza. As you may have noticed in our lab we are adding groups into groups to allow us to run plays on a larger set or smaller set of host types.
+
+![](/images/lecture1.3-inventory-children.png)
+
+![]/images/lecture1.3-inventory-vars.png)
+
 
 
