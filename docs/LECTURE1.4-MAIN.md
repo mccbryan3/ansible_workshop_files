@@ -32,7 +32,7 @@ A simple play in a playbook may look like so...
 
 ```
 - name: Show and example of a play
-  hosts: windows
+  hosts: linux
   remote_user: ansible-user
   become: yes
   gather_facts: yes
