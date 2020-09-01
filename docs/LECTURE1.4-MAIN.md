@@ -86,3 +86,9 @@ A multiple play playbook could look something like the below.
 ```
 
 In the playbook above we have two plays defined. One play runs on the linux group and the second runs on a windows group. Each play has a set of play definitions to allow the play to execute as expected.
+
+As stated earlier Playbooks are written in YAML syntax. YAML is dependent on indentation for interpretation.
+
+Each indentation should be two spaces. I find most syntax errros when running playbooks stem from bad indentaton in the playbook.
+
+
