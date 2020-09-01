@@ -49,12 +49,15 @@ ansible-playbook pb.controller-config.yaml
 
 ```ping win-vm01-01.yourdomain```<br>
 
+**You should now get replies from you windows host.**
+
+**As well you should be able to RDP into your Windows host**
+
 In this lab we used the ```win_firewall_rule``` module to open firewall ports on our windows lab machine.
 
 ___If you have issues with your playbook run ```diff``` on your playbook against the playbook in the lab_windows directory.___
 
 ```diff pb.win-firewall-01.yaml lab_windows/pb.win-firewall.yaml```
-
 
 
 **End of Lab1.4**
