@@ -10,9 +10,9 @@ If not su into ansible-user and cd into the working directory.
 su - ansible-user
 cd /home/ansible-user/ansible_workshop_files/Domain-01
 ```
-2. Create a new playbook called pb.basic-playbook.yaml
+2. Run the pb.controller-config.yaml file to configure the vim
 ```
-vim pb.configure-firewall.yaml
+ansible-playbook pb.controller-config.yaml
 ```
 
 
