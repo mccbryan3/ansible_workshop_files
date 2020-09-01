@@ -31,6 +31,12 @@ and so on....
 
 **We will be using CentOS Enterprise Linux in this lab. The lab will be tested with CentOS 8 using Ansible 2.9**
 
+**The below script will need to be ran on your Windows hosts to generate a certificate for WinRM to use on HTTPS.**
+
+**This is the default script and provides self-signed certificate. You may want to use your own PKI for certificates**
+
+[ConfigureRemotingForAnsible](https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)
+
 ## Labs Content Summary
 
 These items will be installed and configured in the lab. The machines above should be fresh deployments before you begin.<BR>
