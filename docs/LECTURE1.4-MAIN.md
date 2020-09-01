@@ -92,4 +92,6 @@ As stated earlier Playbooks are written in YAML syntax. YAML is dependent on ind
 
 Each indentation should be two spaces. I find most syntax errros when running playbooks stem from bad indentaton in the playbook.
 
+Play breakdown reference can also be found in our [Playbook Basics](/docs/PLAY-BASICS-MAIN.md) write up at the heading of the workshop.
+
 
