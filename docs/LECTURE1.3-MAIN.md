@@ -62,7 +62,7 @@ Groups can be members of groups as well using the ```[group:children]``` stanza.
 
 ![](/images/lecture1.3-inventory-children.png)
 
-![]/images/lecture1.3-inventory-vars.png)
+![](/images/lecture1.3-inventory-vars.png)
 
 
 
