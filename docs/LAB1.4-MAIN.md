@@ -31,7 +31,15 @@ ansible-playbook pb.controller-config.yaml
 
 ![](/images/lab1.4-win-fre.png)
 
+**In this example we will be opening RDP and ICMP on the windows firewall.**
 
+6. Run the playbook.
+
+```ansible-playbook pb.win-firewall-01.yaml```
+
+7. Retry the ping to your windows host.
+
+```ping win-vm01-01.yourdomain```<br>
 
 **End of Lab1.3**
 
