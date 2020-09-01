@@ -55,44 +55,7 @@ In this example we...
 * Define our tasks heading
 * Define a task using the file module to create a file
 
-A multiple play playbook could look something like the below.
 
-```
-- name: Touch a file in the root home dir
-  remote_user: ansible-user
-  become: yes
-  hosts: linux
-  gather_facts: yes
-
-  tasks:
-    - name: Do the touching
-      file:
-        state: touch
-        path: /root/newfile1
-
-- name: Configure firewall for Windows
-  hosts: win_nodes
-  gather_facts: yes
-
-  tasks:
-
-    - name: Open ICMP port
-      win_firewall_rule:
-        name: ICMP Allow incoming V4 echo request
-        enabled: yes
-        state: present
-        action: allow
-        direction: in
-        protocol: icmpv4
-```
-
-In the playbook above we have two plays defined. One play runs on the linux group and the second runs on a windows group. Each play has a set of play definitions to allow the play to execute as expected.
-
-As stated earlier Playbooks are written in YAML syntax. YAML is dependent on indentation for interpretation.
-
-Each indentation should be two spaces. I find most syntax errros when running playbooks stem from bad indentaton in the playbook.
-
-Play breakdown reference can also be found in our [Playbook Basics](/docs/PLAY-BASICS-MAIN.md) write up at the heading of the workshop.
 
 ## Plays
 
@@ -179,13 +142,36 @@ ansible-doc module
 ...for more information on tasks
 
 ### Playbooks can have multiple plays
+
+A multiple play playbook could look something like the below.
+
 ```
-- name
-  hosts:
+- name: Touch a file in the root home dir
+  remote_user: ansible-user
+  become: yes
+  hosts: linux
+  gather_facts: yes
+
   tasks:
-     -  task1_play1
-- name
-  hosts:
+    - name: Do the touching
+      file:
+        state: touch
+        path: /root/newfile1
+
+- name: Configure firewall for Windows
+  hosts: win_nodes
+  gather_facts: yes
+
   tasks:
-     - task1_play2
+
+    - name: Open ICMP port
+      win_firewall_rule:
+        name: ICMP Allow incoming V4 echo request
+        enabled: yes
+        state: present
+        action: allow
+        direction: in
+        protocol: icmpv4
 ```
+
+In the playbook above we have two plays defined. One play runs on the linux group and the second runs on a windows group. Each play has a set of play definitions to allow the play to execute as expected.
