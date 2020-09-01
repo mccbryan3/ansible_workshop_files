@@ -22,7 +22,7 @@ More information on the ansible.cfg file can be found [here](https://docs.ansibl
 
 ## Inventory file
 
-Plays for the most part are written to execute on remote hosts. These hosts are part of the inventory. Whether you are working with ansible engine or with Ansible Tower you will need to be familar with inventory. The default location for the inventory file is ```/etc/ansible/hosts```. As you have seen in the previous labs we have been specifying the path to our inventory file with the ```-i``` parameter on the command line. This is not a bad technque to use as it makes you fully aware of what inventory you are running your plays against. As you have seen above you can specify a unique inventory file using the ansible.cfg file to save typing on the command line.
+Plays, for the most part, are written to execute on remote hosts. These hosts are part of the inventory. Whether you are working with ansible engine or with Ansible Tower you will need to be familar with inventory. The default location for the inventory file is ```/etc/ansible/hosts```. As you have seen in the previous labs we have been specifying the path to our inventory file with the ```-i``` parameter on the command line. This is not a bad technque to use as it makes you fully aware of what inventory you are running your plays against. As you have seen above you can specify a unique inventory file using the ansible.cfg file to save typing on the command line.
 
 ### Defining inventory
 
