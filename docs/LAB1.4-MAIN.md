@@ -33,7 +33,15 @@ ansible-playbook pb.controller-config.yaml
 
 **In this example we will be opening RDP and ICMP on the windows firewall.**
 
-6. Run the playbook.
+6. Run the playbook with the syntax-check flag to verify the playbook syntax.
+
+```ansible-playbook pb.win-firewall-01.yaml --syntax-check```
+
+7. Run a check using the playbook to see if it will make the changes requested.
+
+```ansible-playbook pb.win-firewall-01.yaml --check```
+
+8. Run the playbook
 
 ```ansible-playbook pb.win-firewall-01.yaml```
 
@@ -42,6 +50,12 @@ ansible-playbook pb.controller-config.yaml
 ```ping win-vm01-01.yourdomain```<br>
 
 In this lab we used the ```win_firewall_rule``` module to open firewall ports on our windows lab machine.
+
+If you have issues with your playbook run ```diff``` on your playbook against the playbook in the lab_windows directory.
+
+```diff pb.win-firewall-01.yaml lab_windows/pb.win-firewall.yaml```
+
+
 
 **End of Lab1.4**
 
