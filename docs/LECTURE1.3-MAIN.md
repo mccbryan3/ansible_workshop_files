@@ -66,5 +66,13 @@ This allows us to use the ```[group:vars]``` to assign variables to our groups. 
 
 ![](/images/lecture1.3-inventory-vars.png)
 
+Dynamic inventory files can also be used to define inventory. These are usually scripts that define the inventory hosts and pull the inventory from a third-party solution including but not limited to AWS EC2 instances and VMware and other cloud and on-prem instances.
+
+More information about dynamnic inventory can be found [here](https://docs.ansible.com/ansible/2.3/intro_dynamic_inventory.html)
+
+All inventory should have the ability to be listed using the ```--list-hosts``` parameter from the command line.
+
+
+
 
 
