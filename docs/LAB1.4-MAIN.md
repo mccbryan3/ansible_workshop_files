@@ -15,13 +15,21 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 ansible-playbook pb.controller-config.yaml
 ```
 3. Ping your windows2019 server
-**By IP if you do not have name resolution or fqdn if you do**
-```ping win-vm01-01.yourdomain```
+
+**By IP if you do not have name resolution or fqdn if you do**<br>
+
+```ping win-vm01-01.yourdomain```<br>
+
 **Assuming you have a default install you should get no-reply and your shell should sit waiting.**<br>
+
 4. CTL-C out and create a new file called pb.win-firewall-XX.yaml with the XX being replaced by your student number.
-**In this example my student number is 01**
+
+**In this example my student number is 01**<br>
 ```vim pb.win-firewall-01.yaml```
 
+5. Add the below content to the file.
+
+![](/images/lab1.4-win-fre.png)
 
 
 
