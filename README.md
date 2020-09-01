@@ -27,5 +27,7 @@ _____________________________________________
 |------------|-----------------|
 |[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)| Exploring the playbook syntax|
 |[Lab 2.1](/docs/LAB2.1-MAIN.md)| Writing basic playbooks|
+|[Lecture 2.2](/docs/LECTURE2.2-MAIN.md)| Exploring variables and conditions |
+|[Lab 2.2](/docs/LAB2.2-MAIN.md)| Using variables and conditions in playbooks |
 
 
