@@ -9,7 +9,7 @@
 * One linux VM (centos8)
    * lin-vm01-XX
 * One windows VM (windows 2019 - **WORKGROUP only - non domain joined**)
-   * win-vm01-XX - **Default install non-domain joined firewall on(defeault)**
+   * win-vm01-XX - **Default install non-domain joined firewall on(default)**
    
 **Currently the lab is being tested with Ansible 2.9.11**
 
