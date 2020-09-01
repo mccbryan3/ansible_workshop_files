@@ -8,11 +8,10 @@ This workshop is also built to work as a self-paced workshop providing you meet 
 
 _____________________________________________
 ### Preface and Basics-101
-[Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)<br>
+[Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics) - **Workshop information**<br>
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main) - **Lab Requirements for the workshop**<br>
-[Ansible Workshop Playbook Basics](/docs/PLAY-BASICS-MAIN.md)<br>
 _____________________________________________
-### Domain-01 - Ansible controller and host connection configuration
+### Domain-01 - Ansible Basics
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
 |[Lecture 1.1](/docs/LECTURE1.1-MAIN.md)| Ansible Basic Info, terminology and important Ansible files |
@@ -21,6 +20,8 @@ _____________________________________________
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
 |[Lecture 1.3](/docs/LECTURE1.3-MAIN.md)| The Ansible Configuration and Inventory files|
 |[Lab 1.3](/docs/LAB1.3-MAIN.md)| Exploring the Ansible Configuration and Inventory files|
+|[Lecture 1.4](/docs/LECTURE1.4-MAIN.md)| Exploring the playbook syntax|
+|[Lab 1.4](/docs/LAB1.4-MAIN.md)| Writing basic playbooks|
 _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
