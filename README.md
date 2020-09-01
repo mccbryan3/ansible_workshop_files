@@ -19,7 +19,6 @@ _____________________________________________
 |[Lab 1.2](/docs/LAB1.2-MAIN.md) | Configuring Credentials for inventory hosts and basic Ansible Vault usage |
 |[Lecture 1.3](/docs/LECTURE1.3-MAIN.md)| The Ansible Configuration and Inventory files|
 |[Lab 1.3](/docs/LAB1.3-MAIN.md)| Exploring the Ansible Configuration and Inventory files|
-
 _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
