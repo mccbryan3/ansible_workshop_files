@@ -22,4 +22,25 @@ More information on the ansible.cfg file can be found [here](https://docs.ansibl
 
 ## Inventory file
 
-Plays for the most part are written to execute on remote hosts. These hosts are part of the inventory. Whether you are working with ansible engine or with Ansible Tower you will need to be familar with inventory.
+Plays for the most part are written to execute on remote hosts. These hosts are part of the inventory. Whether you are working with ansible engine or with Ansible Tower you will need to be familar with inventory. The default location for the inventory file is ```/etc/ansible/hosts```. As you have seen in the previous labs we have been specifying the path to our inventory file with the ```-i``` parameter on the command line. This is not a bad technque to use as it makes you fully aware of what inventory you are running your plays against. As you have seen above you can specify a unique inventory file using the ansible.cfg file to save typing on the command line.
+
+### Defining inventory
+
+The default inventory file is in and ini structure and I find this the easiest to work with so I use this structure throughout. The file can aslo be defined in YAML or JSON. Inventory is defined as either ungrouped or grouped hosts. All ungrouped hosts should be defined in the beginning of the file before any group stanzas.
+
+In this lecture we will be using the default ansible inventory file to show how the file can be created.
+
+Ungrouped or stand alone hosts are defined before any groups as shown below.
+
+![](/images/lecture1.3-inventory-ungrouped.png)
+
+Grouped hosts beloing to collection defined by a bracket stanza ```[group]```.
+
+![](/images/lecture1.3-inventory-grouped.png)
+
+Hosts may be defined using patterns. This is advantageous if you have many hosts that share the same naming convention but have numbers that increment them for uniqueness. This is done using the brackets as well but in the hostname itself.
+
+![](/images/lecture1.3-inventory-pattern.png)
+
+
+
