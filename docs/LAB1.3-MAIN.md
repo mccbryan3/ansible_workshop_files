@@ -48,6 +48,8 @@ The results should be a list of your inventory including all variables and the p
 
 Play around listing the inventory using the ``ansible`` ad-hoc command.
 
+This command runs as **ansible \<group or ungrouped host\> --list-hosts**
+
 ![](/images/lab1.3-list-inv.png)
 
 
