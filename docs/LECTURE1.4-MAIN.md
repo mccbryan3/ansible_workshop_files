@@ -53,3 +53,34 @@ In this example we name the play we...
 * Confirm that we want to gather facts
 * Define our tasks heading
 * Define a task using the file module to create a file
+
+A multiple play playbook could look something like the below.
+
+```
+- name: Touch a file in the root home dir
+  remote_user: ansible-user
+  become: yes
+  hosts: linux
+  gather_facts: yes
+
+  tasks:
+    - name: Do the touching
+      file:
+        state: touch
+        path: /root/newfile1
+
+- name: Configure firewall for Windows
+  hosts: win_nodes
+  gather_facts: yes
+
+  tasks:
+
+    - name: Open ICMP port
+      win_firewall_rule:
+        name: ICMP Allow incoming V4 echo request
+        enabled: yes
+        state: present
+        action: allow
+        direction: in
+        protocol: icmpv4
+```        
