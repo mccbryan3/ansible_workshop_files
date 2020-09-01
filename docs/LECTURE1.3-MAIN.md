@@ -73,6 +73,4 @@ More information about dynamnic inventory can be found [here](https://docs.ansib
 All inventory should have the ability to be listed using the ```--list-hosts``` parameter from the command line.
 
 
-
-
-
+[Lab-1.3](/docs/LAB1.3-MAIN.md)
