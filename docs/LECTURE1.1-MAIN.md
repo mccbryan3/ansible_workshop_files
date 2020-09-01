@@ -61,7 +61,7 @@ __Super Important__
         
 ## Ansible Controller
 
-The Ansible Controller is where we will be developing playbooks and executing them with the ```ansible-playbook``` command. The Ansible controller itself is only an interpreter of the ansible plays and uses modules as well as the cofiguration file mentioned above to, for the most part, remotely execute plays on hosts. The ansible controller holds the ansible binaries for excuting plays, working with inventory and managing parameters.
+The Ansible Controller is where we will be developing playbooks and executing them with the ```ansible-playbook``` command. The Ansible controller itself is only an interpreter of the ansible plays and uses modules as well as the cofiguration file mentioned above to, for the most part, remotely execute plays on hosts. The ansible controller holds the ansible binaries for interpreting plays, working with inventory and managing parameters.
 
 Configuring the Ansible Controller... 
 
