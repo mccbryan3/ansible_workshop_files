@@ -24,9 +24,10 @@ vim ansible.cfg
 Uncomment the inventory definition and change it to point to the inventory file in the project directory as shown below. 
 
 ![](/images/lab1.3-default-inv.png)
+
 Locate the ```vault_password_file``` defintion in the file using the vim search function ```/``` from the command mode by pressing ESC a couple times.
 
-___You should take some time to familiarize yourself with the vi and vim editors for the labs. If you are not familiar I highly recommend taking some time and learning some basic commands using a quick reference [references](https://www.adminschoice.com/vi-editor-quick-reference)___
+___You should take some time to familiarize yourself with the vi and vim editors for the labs. If you are not familiar I highly recommend taking some time and learning some basic commands using a quick [reference](https://www.adminschoice.com/vi-editor-quick-reference)___
 
 Modify the entry to use a file named vault_password_file in the ansible-user's home directory as shown below.
 
