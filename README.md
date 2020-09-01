@@ -25,6 +25,7 @@ _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
 |------------|-----------------|
-
+|[Lecture 2.1](/docs/LECTURE2.1-MAIN.md)| Exploring the playbook syntax|
+|[Lab 2.1](/docs/LAB2.1-MAIN.md)| Writing basic playbooks|
 
 
