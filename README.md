@@ -7,6 +7,8 @@
 _____________________________________________
 ### Preface and Basics-101
 [Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics)<br>
+
+**Lab Requirements for the workshop**<br>
 [Ansible Workshop Lab Main](/docs/LAB-MAIN.md#lab-main)<br>
 [Ansible Workshop Playbook Basics](/docs/PLAY-BASICS-MAIN.md)<br>
 _____________________________________________
