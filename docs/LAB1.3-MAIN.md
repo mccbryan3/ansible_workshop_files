@@ -53,11 +53,6 @@ Play around listing the inventory using the ``ansible`` ad-hoc command.
 ![](/images/lab1.3-list-inv.png)
 
 
-**End lab1.3**
-
-Return to Main
-
-
 **End of Lab1.3**
 
 [Return to Main](/README.md)
