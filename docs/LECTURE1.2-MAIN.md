@@ -71,6 +71,21 @@ In this lab we will be using the group_vars variable so that we can apply the co
 Connection to Windows inventory requires the use of WINRM over HTTPS.<br>
 This requires your windows hosts to be configured prior to running any ansible commands against these hosts.<br>
 
+Two pre-reqs are required for connecting to Windows hosts that are not used on Linux hosts.
+
+1. The host must have been configured for winrm over https
+2. The ansible_connection variable must be set to winrm
+
+
+Below is a snippet from our inventory file. The variables here are defined for the entire ```[windows]``` group and are defined as group_vars in the inventory file using the ```[windows:vars]``` stanza. 
+
+These variables could also be placed in the group_vars directory in a yaml file named after the group or even in the play itself. The cert validation variable is used as the configure script below will assign a self signed certificate for winrm over https.
+
+```
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+```
+
 The below script will need to be ran on your Windows hosts to generate a certificate for WinRM to use on HTTPS.
 
 ___This is the default script and provides self-signed certificate. You may want to use your own PKI for certificates___
