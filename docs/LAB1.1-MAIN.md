@@ -123,6 +123,7 @@ Python modules installed here are pywinrm for windows machine support, pyvmomi f
 ansible-playbook pb.controller-config.yaml
 ```
 Examine the output
+
 16. Rerun the setup command on the windows host group
 
 ```
