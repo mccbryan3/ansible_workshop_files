@@ -103,7 +103,7 @@ In the playbook above we have two plays defined. One play runs on the linux grou
 
 ### Basic file editing for playbooks
 
-**Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yml file extension.**
+**Plays are a collection of key value pairs. Keys in the same pair should share the same indentation. Playbooks are YAML files with the .yaml file extension.**
 
 **Indentation is super important and the indention should be configured in vim. The indentation is based on two spaces.**
 
@@ -136,7 +136,7 @@ ___Details on the autocmd___
 
 ```ansible-playbook playbook.yaml -vvvv```
 
-* Starts with three dashes "—" and can end with three dots "…"
+* YAML starts with three dashes "—" and can end with three dots "…"
 
 * Playbook tasks are ran in order
 
@@ -155,6 +155,8 @@ The second two register and **failed_when** are optional. These are best practic
 ### Basic Tasks..
 
 yum, copy, service, command, shell, etc…
+
+windows modules usually start with the "win_" prefix.
 
 Use the ```ansible-doc``` command on specific modules to get information about the module. 
 
