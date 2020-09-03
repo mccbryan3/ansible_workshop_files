@@ -60,6 +60,23 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 ```diff pb.win-firewall-01.yaml lab_windows/pb.win-firewall.yaml```
 
 
+### Multiple Play Playbook
+
+
+1. In the Domain-01 directory as ansible-user create a new file called pb.multi-play-XX.yaml with the XX being replaced by your student number.
+
+**In this example my student number is 01**<br>
+```vim pb.multi-play-01.yaml```
+
+2. Add the below content to the file.
+
+**Notice that this playbook has two plays.**<br>
+**Each play with the intent of installing web services on linux and windows respectively.**<br>
+**Also notice that we have comments in this playbook denoting the plays. These are optional.**<br>
+
+![](/images/lab1.4-multi-play.png)
+
+
 **End of Lab1.4**
 
 [Return to Main](/README.md)
