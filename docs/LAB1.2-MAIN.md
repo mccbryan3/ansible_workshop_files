@@ -50,11 +50,18 @@ su - ansible-user
 git clone https://github.com/mccbryan3/ansible_workshop_files.git
 ```
 
-6. Exit out of ansible-user and copy your inventory file then su back to ansible-user
+6. Use sudo and copy your inventory file to the ansible-user's directory
 
 ```
 sudo cp /root/ansible_workshop_files/Domain-01/inventory /home/ansible-user/ansible_workshop_files/Domain-01
 cd ansible_workshop_files/Domain-01/
+```
+
+6.1 Change owner and permissions on you inventory for the ansible-user
+
+```
+sudo chown ansible-user:ansible-user inventory
+chmod 664 inventory
 ```
 
 **Recheck your inventory file**
