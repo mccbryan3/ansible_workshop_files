@@ -62,7 +62,6 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 
 ### Multiple Play Playbook
 
-
 1. In the Domain-01 directory as ansible-user create a new file called pb.multi-play-XX.yaml with the XX being replaced by your student number.
 
 **In this example my student number is 01**<br>
@@ -89,8 +88,5 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 ___If you have issues with your playbook run ```diff``` on your playbook against the playbook in the lab_windows directory.___
 
 ```diff pb.multi-play-01.yaml lab_multi/pb.multi-play.yaml```
-
-
-**End of Lab1.4**
 
 [Return to Main](/README.md)
