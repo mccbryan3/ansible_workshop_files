@@ -80,7 +80,7 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 
 3. After the play completes either open the web browser to your two machines or use the curl command to check the web services.
 
-**The below commands assumes student number 01***
+**The below commands assumes student number 01**
 
 ```curl lin-vm01-01.lab.loc | grep -i apache && curl win-vm01-01.lab.loc | grep -i IIS```
 
