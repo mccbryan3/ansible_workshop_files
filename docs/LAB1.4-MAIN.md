@@ -76,6 +76,14 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 
 ![](/images/lab1.4-multi-play.png)
 
+**The IIS install can take a little time**
+
+3. After the play completes either open the web browser to your two machines or use the curl command to check the web services.
+
+```curl lin-vm01-01.lab.loc | grep -i apache && curl win-vm01-01.lab.loc | grep -i IIS```
+
+![](/images/lab1.4-multi-play-verify.png)
+
 
 **End of Lab1.4**
 
