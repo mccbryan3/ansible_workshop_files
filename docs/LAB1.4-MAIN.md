@@ -80,9 +80,15 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 
 3. After the play completes either open the web browser to your two machines or use the curl command to check the web services.
 
+**The below commands assumes student number 01***
+
 ```curl lin-vm01-01.lab.loc | grep -i apache && curl win-vm01-01.lab.loc | grep -i IIS```
 
 ![](/images/lab1.4-multi-play-verify.png)
+
+___If you have issues with your playbook run ```diff``` on your playbook against the playbook in the lab_windows directory.___
+
+```diff pb.multi-play-01.yaml lab_multi/pb.multi-play.yaml```
 
 
 **End of Lab1.4**
