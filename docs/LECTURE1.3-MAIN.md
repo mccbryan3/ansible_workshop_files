@@ -8,7 +8,7 @@ The ansible configuration file can be located in the following locations.
 
 * ANSIBLE_CONFIG (env)
 * /etc/anisble/ansible.cfg
-* ~/ansible.cfg
+* ~/.ansible.cfg
 * In the root of the “project” being ran (current directory)
 
 For the most part your install should be fine using the default configuration file as most of the unique changes you would want to provide in external variables using the inventory file, group_vars, host_vars or playbook variables. Some of the parameters you might change exist in the default stanza. These include the path to the inventory file
