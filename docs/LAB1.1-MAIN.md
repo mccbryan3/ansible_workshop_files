@@ -31,12 +31,17 @@ git clone https://github.com/mccbryan3/ansible_workshop_files.git
 cd ansible_workshop_files
 ```
 
-8. Copy your default-inventory file into the Domain-01 directory naming it inventory and cd into the Domain-01 directory
+8. Copy your default-inventory file into the Domain-01 directory naming it inventory, and cd into the Domain-01 directory
 
 ```
 cp default-inventory Domain-01/inventory
 
 cd Domain-01
+```
+8.1 Change the owner and group on the new inventory file as well as setting permissions
+
+```
+sudo chown ansible-user:ansible-user inventory && chmod 664 inventory
 ```
 
 9. Cat the inventory file and verify

@@ -1,0 +1,44 @@
+---
+
+##### Play 1
+
+- name: Install web server centos
+  remote_user: ansible-user
+  become: yes
+  hosts: lin_nodes
+  gather_facts: yes
+
+  tasks:
+    - name: Configure firewalld to allow http 
+      firewalld:
+        service: http
+        state: enabled
+        permanent: yes
+        immediate: yes
+
+    - name: Install httpd application and start service
+      package:
+        name: httpd
+        state: present
+
+    - name: Start the httpd service and enable on startup
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+###### Play 2
+
+- name: Install IIS on Windows
+  hosts: win_nodes
+  gather_facts: yes
+
+  tasks:
+    
+    - name: Install IIS Web-Server with sub features and management tools
+      win_feature:
+        name: Web-Server
+        state: present
+        include_sub_features: yes
+        include_management_tools: yes
+

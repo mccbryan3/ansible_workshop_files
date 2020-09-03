@@ -59,6 +59,34 @@ ___If you have issues with your playbook run ```diff``` on your playbook against
 
 ```diff pb.win-firewall-01.yaml lab_windows/pb.win-firewall.yaml```
 
-**End of Lab1.4**
+
+### Multiple Play Playbook
+
+1. In the Domain-01 directory as ansible-user create a new file called pb.multi-play-XX.yaml with the XX being replaced by your student number.
+
+**In this example my student number is 01**<br>
+```vim pb.multi-play-01.yaml```
+
+2. Add the below content to the file.
+
+**Notice that this playbook has two plays.**<br>
+**Each play with the intent of installing web services on linux and windows respectively.**<br>
+**Also notice that we have comments in this playbook denoting the plays. These are optional.**<br>
+
+![](/images/lab1.4-multi-play.png)
+
+**The IIS install can take a little time**
+
+3. After the play completes either open the web browser to your two machines or use the curl command to check the web services.
+
+**The below commands assumes student number 01**
+
+```curl lin-vm01-01.lab.loc | grep -i apache && curl win-vm01-01.lab.loc | grep -i IIS```
+
+![](/images/lab1.4-multi-play-verify.png)
+
+___If you have issues with your playbook run ```diff``` on your playbook against the playbook in the lab_windows directory.___
+
+```diff pb.multi-play-01.yaml lab_multi/pb.multi-play.yaml```
 
 [Return to Main](/README.md)
