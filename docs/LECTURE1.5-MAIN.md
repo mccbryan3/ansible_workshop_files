@@ -7,3 +7,13 @@ It has already been discussed in the previous lectures how variable placement ca
 
 Play based variables are usually assigned at the beginning of the play using the ```vars``` or ```vars_files``` or perhaps even the ```vars_prompt``` tags.
 
+Variables in Ansible must begin with a letter and should only contain letters numbers and underscores. 
+
+**Dashes/hyphens are not allowed**
+
+Facts are also initialized with variables from the systems that the setup module is ran against.
+
+The easiest way to see these variables is with the ```ansible locahost -m setup``` command.
+
+
+
