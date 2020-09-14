@@ -22,6 +22,8 @@ _____________________________________________
 |[Lab 1.3](/docs/LAB1.3-MAIN.md)| Exploring the Ansible Configuration and Inventory files|
 |[Lecture 1.4](/docs/LECTURE1.4-MAIN.md)| Exploring the playbook syntax|
 |[Lab 1.4](/docs/LAB1.4-MAIN.md)| Writing basic playbooks|
+|[Lecture 1.5](/docs/LECTURE1.5-MAIN.md)| Reviewing variables, jinja2 and conditionals|
+|[Lab 1.5](/docs/LAB1.5-MAIN.md)| Writing playbooks with variables and conditionals|
 _____________________________________________
 ### Domain-02
 | Subcontent Links | Subcontent Name |
