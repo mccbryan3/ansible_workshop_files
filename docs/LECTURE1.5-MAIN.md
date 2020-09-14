@@ -1,5 +1,6 @@
 # LECTURE 1.5 - Reviewing variables, jinja2 and conditionals
 
+### Variable basics
 
 As with any "scripting language" variables and working with variable is essential. Variables are used to asssign dynamic and transient data during the execution of your plays  and playbooks. 
 
@@ -14,6 +15,14 @@ Variables in Ansible must begin with a letter and should only contain letters nu
 Facts are also initialized with variables from the systems that the setup module is ran against.
 
 The easiest way to see these variables is with the ```ansible locahost -m setup``` command.
+
+### Simple variables
+
+### Lists
+
+### Dictionaries
+
+### Jinja
 
 
 
