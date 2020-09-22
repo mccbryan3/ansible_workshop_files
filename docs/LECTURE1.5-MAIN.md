@@ -18,11 +18,17 @@ The easiest way to see these variables is with the ```ansible locahost -m setup`
 
 ### Simple variables
 
+Simple variables are created and assigned as follows.
+
+```
+vars:
+  simple_var1: some_variable1
+```
+
 ### Lists
 
 ### Dictionaries
 
 ### Jinja Templating
 
-
-
+### Conditionals
