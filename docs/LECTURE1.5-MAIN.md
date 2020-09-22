@@ -22,7 +22,7 @@ The easiest way to see these variables is with the ```ansible locahost -m setup`
 
 ### Dictionaries
 
-### Jinja
+### Jinja Templating
 
 
 
