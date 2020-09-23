@@ -257,7 +257,9 @@ The above snippet contains two tasks and two conditionals. There first only runs
 
 There is also a Jinja filter in this case "casting" the ```ansible_facts['distribution_major_version']``` into integer data type and comparing it as greater than the number 7.
 
+There is also a return to the standard out check of the command module before calling the debug module.
+
 As you can see there are a lot of very creative things you can do using conditionals with variables and Ansible hosts facts. More information on conditionals can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
 
-[Lab 1.5](/docs/LAB-MAIN-1.5)
+[Lab 1.5](/docs/LAB1.5-MAIN.md)
 
