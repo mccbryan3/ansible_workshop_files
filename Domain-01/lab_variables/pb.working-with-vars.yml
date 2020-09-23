@@ -61,3 +61,12 @@
     debug:
       msg: "{% for item in var_test2 %} {{ item }} {% endfor %}"
 
+  - name: Find all files with the word password in the current directory 
+    shell: "{{ command }}"
+    vars: 
+      - command: "grep -R 'password' ."
+    register: where_is_password
+   
+  - name: debug where_is_password
+    debug:
+      msg: "{{ where_is_password.stdout }}"
