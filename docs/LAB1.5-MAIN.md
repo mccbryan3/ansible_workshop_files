@@ -62,6 +62,17 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 12. Cat the contents of the /home/ansible-user/template-test.txt file.
 
 ```cat /home/ansible-user/template-test.txt```
+<br>___Notice how we used the for loop in Jinja to write the contents of the file based on Ansible variables.___
+
+13. Add the below image contents to the pb.variables-<student>.yaml file at the bottom of the playbook.
+ 
+ ![](/images/lab-facts-task.png)
+ 
+14. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+
+15. Run the playbook and verify output.
+ 
+
 
 
 
