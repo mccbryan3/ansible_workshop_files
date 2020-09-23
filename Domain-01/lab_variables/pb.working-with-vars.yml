@@ -4,7 +4,7 @@
   hosts: localhost
   gather_facts: yes
   vars:
-    array_variable: []
+    list_variable: []
     var_test1: false
     var_test2:
       - item1
@@ -14,6 +14,8 @@
       user:
         name: "Lab Person"
         purpose: "Test the Lab"
+    var_dict:
+       { item_key1: value1, item_key2: value2, item_key3: value3 }
 
   vars_files: file-vars.yml
 
@@ -21,7 +23,7 @@
 
   - name: Output some varaibles
     debug: 
-      msg: "{{ array_variable }}"
+      msg: "{{ list_variable }}"
 
   - name: Some conditionals
     debug:
@@ -31,11 +33,16 @@
   - name: Looping through list variable
     debug:
       msg: "{{ item }}"
-    loop: "{{ var_test2 }}"
+    with_items: "{{ var_test2 }}"
 
   - name: Nested varibles
     debug:
       msg: "{{ var_test3.user.name }}"
+
+  - name: Dictionary variables
+    debug:
+      msg: "Item key is {{ item.key }} and the value is {{ item.value }}"
+    with_dict: "{{ var_dict }}"
 
   - name: Facts display
     debug:
@@ -54,3 +61,24 @@
     debug:
       msg: "{% for item in var_test2 %} {{ item }} {% endfor %}"
 
+  - name: Find all files with the word password in the current directory 
+    shell: "{{ command }}"
+    vars: 
+      - command: "grep -R 'password' ."
+    register: where_is_password
+   
+  - name: debug where_is_password
+    debug:
+      msg: "{{ where_is_password.stdout  }}"
+    when: where_is_password.stdout != ""
+
+ 
+  - name: Say hello when the OS is windows or CentOS greater than 6
+    shell: echo "Hello There!!!"
+    when: ansible_facts['os_family'] == "RedHat" and (ansible_facts['distribution_major_version'] | int > 7 ) 
+    register: hello_there
+
+  - name: Debug the hello there
+    debug:
+      msg: "{{ hello_there.stdout }}"
+    when: hello_there.stdout != ""
