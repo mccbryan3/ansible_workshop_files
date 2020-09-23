@@ -80,7 +80,9 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 17. Verify that the output contains the ```ansible_facts['default_ipv4']``` facts
 
+If you have issues with your playbook run diff on your playbook against the playbook in the lab_variables directory.
 
+diff lab_variables/pb.variables-01.yaml lab_variables/pb.variables-completed.yaml
 
 
 
