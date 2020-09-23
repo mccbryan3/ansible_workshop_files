@@ -78,6 +78,9 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
  
 16. Modify the pb.variables-<student>.yaml file and change "Windows" to "RedHat" and rerun the playbook.
 
+17. Verify that the output contains the ```ansible_facts['default_ipv4']``` facts
+
+
 
 
 
