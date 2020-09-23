@@ -16,8 +16,8 @@ su - ansible-user
 cd /home/ansible-user/ansible_workshop_files/Domain-01
 ```
 
-1. Create a new file called **pb.variables-<student number>.yaml**
- <br> ___example with student 01 below___
+1. Create a new file called pb.variables-<student number>.yaml
+ <br> ___The example with student 01 below___
 
 ```vim pb.variables-01.yaml```
 
