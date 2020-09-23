@@ -1,0 +1,10 @@
+name: variables all over
+  hosts: localhost
+  vars:
+    sample_var1: variable_content
+  tasks:
+    
+    - debug:
+        msg: "Echoing out the variable : {{ sample_var1 }}"
+      vars:
+        sample_var1: replace_content
