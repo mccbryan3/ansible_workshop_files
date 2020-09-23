@@ -219,6 +219,8 @@ This allows you to make further decisions in your play on the contents of that t
 
 Example of the using register with a task and taking the stdout of the command module and displaying the output.
 
+The variable ```where_is_password``` is filled by the shell module using the ```group -R password .``` command which looks in all files in the current directory recursively and captures all of the output. The command module is a dictionary output by default with the standard output stored in the stdout key. We access the value of the key with the ```.``` as used similar to object oriented languages as properties.
+
 ```
   - name: Find all files with the word password in the current directory
     shell: "{{ command }}"
