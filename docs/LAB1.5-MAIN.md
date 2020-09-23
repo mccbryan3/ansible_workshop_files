@@ -72,7 +72,11 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 15. Run the playbook and verify output.
  
-
+ ![](/images/lab-facts-task-out.png)
+ 
+ ___Notice how the task was skipped as we are on a RedHat os_family machine as localhost___
+ 
+16. Modify the pb.variables-<student>.yaml file and change "Windows" to "RedHat" and rerun the playbook.
 
 
 
