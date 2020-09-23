@@ -42,5 +42,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 6. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
 
-7. 
+7. Run the playbook and verify output.
+
+
 
