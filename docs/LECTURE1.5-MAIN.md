@@ -35,7 +35,7 @@ Variable precendence order is listed below with the higher number listed overwri
 
 1. Configuration settings
 2. Command-line options
-  * used primarily for become, user etc and not related to extra-vars
+    * used primarily for become, user etc and not related to extra-vars
 3. Playbook keywords
 4. Variables
 5. Extra Variables
