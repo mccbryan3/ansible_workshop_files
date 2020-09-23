@@ -161,7 +161,7 @@ I encourage using the Ansible facts to help learn how to work with variables and
 
 ### Jinja2 Templating
 
-The "{{}}" brackets are part of the Jinja2 templating language used heavily in Ansible.
+The "{{ }}" brackets are part of the Jinja2 templating language used heavily in Ansible.
 
 Jinja also uses **filters** heavily to transform data.
 
