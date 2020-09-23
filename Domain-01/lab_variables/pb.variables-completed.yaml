@@ -40,7 +40,3 @@
       debug:
         msg: "{{ ansible_facts['default_ipv4'] }}"
       tags: facts
-     
-
-
-

@@ -4,7 +4,7 @@
   hosts: localhost
   gather_facts: yes
   vars:
-    array_variable: []
+    list_variable: []
     var_test1: false
     var_test2:
       - item1
@@ -14,6 +14,8 @@
       user:
         name: "Lab Person"
         purpose: "Test the Lab"
+    var_dict:
+       { item_key1: value1, item_key2: value2, item_key3: value3 }
 
   vars_files: file-vars.yml
 
@@ -21,7 +23,7 @@
 
   - name: Output some varaibles
     debug: 
-      msg: "{{ array_variable }}"
+      msg: "{{ list_variable }}"
 
   - name: Some conditionals
     debug:
@@ -31,11 +33,16 @@
   - name: Looping through list variable
     debug:
       msg: "{{ item }}"
-    loop: "{{ var_test2 }}"
+    with_items: "{{ var_test2 }}"
 
   - name: Nested varibles
     debug:
       msg: "{{ var_test3.user.name }}"
+
+  - name: Dictionary variables
+    debug:
+      msg: "Item key is {{ item.key }} and the value is {{ item.value }}"
+    with_dict: "{{ var_dict }}"
 
   - name: Facts display
     debug:
