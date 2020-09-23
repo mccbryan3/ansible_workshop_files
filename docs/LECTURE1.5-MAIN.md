@@ -104,7 +104,8 @@ Lists can be used in many ways in Ansible with the primary purpose of looping th
 It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided will is shown below.
 
 ```
-TASK [Looping through list variable] ****************************************************************************************************************************************************************************ok: [localhost] => (item=item1) => {
+TASK [Looping through list variable] ***********************************
+ok: [localhost] => (item=item1) => {
     "msg": "item1"
 }
 ok: [localhost] => (item=item2) => {
