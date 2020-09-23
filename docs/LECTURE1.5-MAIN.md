@@ -18,7 +18,7 @@ The easiest way to see these variables is with the ```ansible locahost -m setup`
 
 ### Simple variables
 
-Simple variables are created and assigned as follows.
+Simple variables are declared and defined as follows.
 
 ```
 vars:
@@ -31,8 +31,53 @@ Variables can be accessed in your ansible playbooks using the Jinja style variab
 
 These variables can also be provided during the playbooik execution using the ```--extra-vars``` or ```-e``` parameter which can provide variables to the playbook or ad-hoc ansible command at execution. **The variables provided with the command line ```-e``` will also overwrite any variables that are provided in the playbook with the same name.**
 
+Variable precendence order is listed below with the higher number listed overwriting any previous variables that are defined.
+
+1. Configuration settings
+2. Command-line options
+  * used primarily for become, user etc and not related to extra-vars
+3. Playbook keywords
+4. Variables
+5. Extra Variables
+
 Due to variable precedence it is a good practice to develop a method for providing varaibles to playbooks and sticking with that method.
 
+```
+- name: variables all over
+  hosts: localhost
+  vars:
+    sample_var1: variable_content
+  tasks:
+    
+    - debug:
+        msg: "Echoing out the variable : {{ sample_var1 }}"
+      vars:
+        sample_var1: replace_content
+```
+
+In the play above the variable ```sample_var1``` has defined at the play as a play keyword and then subsequently overwritten at  the task level.
+
+Running the playbook will yield the following output.
+
+```
+TASK [debug] *************************************
+ok: [localhost] => {
+    "msg": "Echoing out the variable : replace_content"
+}
+```
+
+Even further you could replace this variables at the command line with the 
+
+```ansible-playbook overwritten-vars.yaml -e "sample_var1=overwrtten_content"```
+
+Which will yield the output.
+
+```
+TASK [debug] *************************************
+ok: [localhost] => {
+    "msg": "Echoing out the variable : overwrtten_content"
+}
+```
 
 ### Lists
 
