@@ -133,9 +133,31 @@ var_dict:
 
 A task using these can access the key name and the value by using the ```with_dict:``` module and the same technique as the list however using the **item.key** and **item.value** as shown in the example below.
 
+```
+  - name: Dictionary variables
+    debug:
+      msg: "Item key is {{ item.key }} and the value is {{ item.value }}"
+    with_dict: "{{ var_dict }}"
+```
 
+The output of the above task with the previosly defined dictionary items is show below.
 
+```
+TASK [Dictionary variables] ********************************************************
+ok: [localhost] => (item={'key': 'item_key1', 'value': 'value1'}) => {
+    "msg": "Item key is item_key1 and the value is value1"
+}
+ok: [localhost] => (item={'key': 'item_key2', 'value': 'value2'}) => {
+    "msg": "Item key is item_key2 and the value is value2"
+}
+ok: [localhost] => (item={'key': 'item_key3', 'value': 'value3'}) => {
+    "msg": "Item key is item_key3 and the value is value3"
+}
+```
 
+A great way to learn to work with variable types is by exploring the Ansible facts using the **setup** module. Ansible facts are variables gathered from hosts during playbook execution if **gather_facts** is set to yes (the default). These are special variables used for accessing host information in Ansible to help make decisions using conditionals in Ansible playbooks. All of these facts are prefaced with **ansible_**.
+
+I encourage using the Ansible facts to help learn how to work with variables and explore different variable types.
 
 ### Jinja Templating
 
