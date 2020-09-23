@@ -181,7 +181,13 @@ The list of Jinja filters is vast and could probably take a workshop in itself. 
 
 ```"{{ 13.4 * 53 }}"```
 
-4. Complex loops. This example simply loops through the var_test2 variable and is similar to the with_items used above with lists however is much more useful in templating for configuration files.
+4. Setting the default for variables. This is helpful when used in playbooks where the variable may never be defined.
+    * Playbooks will stop and errror on undefined variables so setting defaults may be helpful on those occasions for dealing with undefined variables
+    * This example sets the variable ```variable``` to "hey there" if it is not defined anywhere else.
+
+```"{{ variable | default("hey there") }}"```
+
+5. Complex loops. This example simply loops through the var_test2 variable and is similar to the with_items used above with lists however is much more useful in templating for configuration files.
 
 ```"{% for item in var_test2 %} {{ item }} {% endfor %}"```
 
