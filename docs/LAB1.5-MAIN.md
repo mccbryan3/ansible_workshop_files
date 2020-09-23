@@ -36,6 +36,11 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 ![](/images/lab-1.5-play-out1.png)
 
 5. Open the file again and add the highlighted portions from the graphic below.
+   * This will add a list variable and give an example of looping through the list.
 
 ![](/images/lab-1.5-playdefine-vars-list.png)
+
+6. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+
+7. 
 
