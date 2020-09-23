@@ -69,4 +69,16 @@
    
   - name: debug where_is_password
     debug:
-      msg: "{{ where_is_password.stdout }}"
+      msg: "{{ where_is_password.stdout  }}"
+    when: where_is_password.stdout != ""
+
+ 
+  - name: Say hello when the OS is windows or CentOS greater than 6
+    shell: echo "Hello There!!!"
+    when: ansible_facts['os_family'] == "RedHat" and (ansible_facts['distribution_major_version'] | int > 7 ) 
+    register: hello_there
+
+  - name: Debug the hello there
+    debug:
+      msg: "{{ hello_there.stdout }}"
+    when: hello_there.stdout != ""
