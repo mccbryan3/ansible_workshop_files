@@ -25,6 +25,15 @@ vars:
   simple_var1: some_variable1
 ```
 
+Variables can be accessed in your ansible playbooks using the Jinja style variable syntax.
+
+```"{{ simple_var1 }}"```
+
+These variables can also be provided during the playbooik execution using the ```--extra-vars``` or ```-e``` parameter which can provide variables to the playbook or ad-hoc ansible command at execution. **The variables provided with the command line ```-e``` will also overwrite any variables that are provided in the playbook with the same name.**
+
+Due to variable precedence it is a good practice to develop a method for providing varaibles to playbooks and sticking with that method.
+
+
 ### Lists
 
 ### Dictionaries
