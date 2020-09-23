@@ -59,9 +59,9 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 11. Run the playbook and verify output.
 
-12. Cat the contents of the ~/template.conf file.
+12. Cat the contents of the /home/ansible-user/template-test.txt file.
 
-```cat ~/template.conf```
+```cat /home/ansible-user/template-test.txt```
 
 
 
