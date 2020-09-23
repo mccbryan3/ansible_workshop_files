@@ -231,8 +231,11 @@ The variable ```where_is_password``` is filled by the shell module using the ```
   - name: debug where_is_password
     debug:
       msg: "{{ where_is_password.stdout }}"
+    when: where_is_password.stdout != ""
       
 ```
 
+An additonal technique is used above for the debug command. We use the ```when``` conditional in this case to check to make sure that the stdout has a value before displaying the message using the debug module.
 
+Using the Ansible facts with the ```when:``` conditional allows you to provide more power to your plays by checking the fact data and executing tasks based on the data in the Ansible host facts.
 
