@@ -220,7 +220,7 @@ This allows you to make further decisions in your play on the contents of that t
 Example of the using register with a task and taking the stdout of the command module and displaying the output.
 
 ```
-  - name: Find all files with the word password in /home
+  - name: Find all files with the word password in the current directory
     shell: "{{ command }}"
     vars:
       - command: "grep -R 'password' ."
