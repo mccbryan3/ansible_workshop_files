@@ -239,3 +239,25 @@ An additonal technique is used above for the debug command. We use the ```when``
 
 Using the Ansible facts with the ```when:``` conditional allows you to provide more power to your plays by checking the fact data and executing tasks based on the data in the Ansible host facts.
 
+Notice that **when using the conditionals the braces are not used with the variables.**
+
+```
+  - name: Say hello when the OS is windows or CentOS greater than 6
+    shell: echo "Hello There!!!"
+    when: ansible_facts['os_family'] == "RedHat" and (ansible_facts['distribution_major_version'] | int > 7 ) 
+    register: hello_there
+
+  - name: Debug the hello there
+    debug:
+      msg: "{{ hello_there.stdout }}"
+    when: hello_there.stdout != ""
+```
+
+The above snippet contains two tasks and two conditionals. There first only runs the command ```echo "Hello There!!!"``` if the os_family is RedHat and the version is above 7.
+
+There is also a Jinja filter in this case "casting" the ```ansible_facts['distribution_major_version']``` into integer data type and comparing it as greater than the number 7.
+
+As you can see there are a lot of very creative things you can do using conditionals with variables and Ansible hosts facts. More information on conditionals can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
+
+[Lab 1.5](/docs/LAB-MAIN-1.5)
+
