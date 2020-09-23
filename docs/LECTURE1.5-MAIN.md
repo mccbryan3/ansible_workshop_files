@@ -165,7 +165,7 @@ The below returns all ipv4 addresses from the host.
 
 ```"{{ ansible_facts['all_ipv4_addresses'] }}"```
 
-The below fact uses the date_time fact from the host and accesses the value of the vaaue of the iso8601 key from the date_time dictionary.
+The below fact uses the date_time fact from the host and accesses the value of the vaaue of the iso8601 key from the date_time dictionary. This is an example of accessing nested variables.
 
 ```{{ ansible_facts['date_time']['iso8601'] }}```
 
@@ -209,5 +209,28 @@ The list of Jinja filters is vast and could probably take a workshop in itself. 
 
 More on Jinja2 filters used in Ansible can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html)
 
-### Conditionals
+### Conditionals and Register
+
+Playbook conditionals are used to make decisions in plays and on tasks. All conditionals rely on ansible facts or variables when making decsisions and ultimately control the flow of your plays and playbooks.
+
+When executing tasks you can set the result of that task to a variable on the end of the task usng the **register** module.
+
+This allows you to make further decisions in your play on the contents of that task result or use that data from subsequent tasks.
+
+Example of the using register with a task and taking the stdout of the command module and displaying the output.
+
+```
+  - name: Find all files with the word password in /home
+    shell: "{{ command }}"
+    vars:
+      - command: "grep -R 'password' ."
+    register: where_is_password
+
+  - name: debug where_is_password
+    debug:
+      msg: "{{ where_is_password.stdout }}"
+      
+```
+
+
 
