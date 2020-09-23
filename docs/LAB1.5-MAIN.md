@@ -44,6 +44,19 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 7. Run the playbook and verify output.
 <br>___Notice how the "Title" filter capatilizes the first letter in bryan.___
+
 ![](/images/lab-1.5-playdefine-vars-list01.png)
+
+8. Create a new file in the current directory called template.j2 and enter the contents as shown in the image below.
+
+![](/images/lab-template-j2.png)
+
+9. Open the pb.variables-<student>.yaml file and enter the contents at the end of the playbook as shown in the image below.
+ 
+![](/images/lab-template-task.png)
+
+
+
+
 
 
