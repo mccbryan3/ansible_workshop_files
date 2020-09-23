@@ -55,6 +55,15 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
  
 ![](/images/lab-template-task.png)
 
+10. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+
+11. Run the playbook and verify output.
+
+12. Cat the contents of the ~/template.conf file.
+
+```cat ~/template.conf```
+
+
 
 
 
