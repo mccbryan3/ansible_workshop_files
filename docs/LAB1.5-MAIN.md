@@ -17,7 +17,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 ```
 
 1. Create a new file called **pb.variables-<student number>.yaml**
-  ___example with student 01 below___
+ <br> ___example with student 01 below___
 
 ```vim pb.variables-01.yaml```
 
@@ -31,7 +31,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 4. Run the playbook
       * The playbook should prompt for the variable ```user``` based on the vars_prompt playbook key word.
-___output shown below___
+<br>___output shown below___
 
 ![](/images/lab-1.5-play-out1.png)
 
