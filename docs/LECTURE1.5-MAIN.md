@@ -101,7 +101,7 @@ Lists can be used in many ways in Ansible with the primary purpose of looping th
     with_items: "{{ var_test2 }}"
 ```
 
-It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided will is shown below.
+It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided will is shown below. As you can see in the Ansible playbook output the "{{ item }}" simply becomes each variable in the list as shown with the **item=item1** output.
 
 ```
 TASK [Looping through list variable] ***********************************
