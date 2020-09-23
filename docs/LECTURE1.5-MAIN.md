@@ -81,6 +81,40 @@ ok: [localhost] => {
 
 ### Lists
 
+Variables can contain lists of items sometimes called arrays in other languages.
+
+Lists are defined simply by provided by providing each **item** in the list under the variable prefixed with the dash and a space.
+
+```
+  var_test2:
+    - item1
+    - item2
+    - item3
+```
+
+Lists can be used in many ways in Ansible with the primary purpose of looping through items in a task. The below example shows a task using the list with the **with_items:** module and applying each item to the debug module task.
+
+```
+  - name: Looping through list variable
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ var_test2 }}"
+```
+
+It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided will is shown below.
+
+```
+TASK [Looping through list variable] ****************************************************************************************************************************************************************************ok: [localhost] => (item=item1) => {
+    "msg": "item1"
+}
+ok: [localhost] => (item=item2) => {
+    "msg": "item2"
+}
+ok: [localhost] => (item=item3) => {
+    "msg": "item3"
+}
+```
+
 ### Dictionaries
 
 ### Jinja Templating
