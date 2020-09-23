@@ -163,10 +163,29 @@ I encourage using the Ansible facts to help learn how to work with variables and
 
 The "{{ }}" brackets are part of the Jinja2 templating language used heavily in Ansible.
 
-Jinja also uses **filters** heavily to transform data.
+Jinja also uses **filters** heavily to transform data. Jinja filters are applied in the following format.
 
-By default any variables used inside the playbook must be defined.
+```"{{ variable | filter }}"```
 
+The list of Jinja filters is vast and could probably take a workshop in itself. I have compiled a list of some of, what I consider, the most widely used Jinja2 filters below with examples.
 
+1. Changes the variable to all UPPERCASE
+
+```"{{ variable | upper }"```
+
+2. Changes the variable to all lowercase
+
+```"{{ variable | lower }"```
+
+3. Math functions work in Jinja
+
+```"{{ 13.4 * 53 }}"```
+
+4. Complex loops. This example simply loops through the var_test2 variable and is similar to the with_items used above with lists however is much more useful in templating for configuration files.
+
+```"{% for item in var_test2 %} {{ item }} {% endfor %}"```
+
+More on Jinja2 filters used in Ansible can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html)
 
 ### Conditionals
+
