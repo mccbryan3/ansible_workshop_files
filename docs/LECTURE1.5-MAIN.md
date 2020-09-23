@@ -159,6 +159,14 @@ A great way to learn to work with variable types is by exploring the Ansible fac
 
 I encourage using the Ansible facts to help learn how to work with variables and explore different variable types.
 
-### Jinja Templating
+### Jinja2 Templating
+
+The "{{}}" brackets are part of the Jinja2 templating language used heavily in Ansible.
+
+Jinja also uses **filters** heavily to transform data.
+
+By default any variables used inside the playbook must be defined.
+
+
 
 ### Conditionals
