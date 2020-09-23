@@ -116,7 +116,26 @@ ok: [localhost] => (item=item3) => {
 }
 ```
 
+Defining an empty list can be done using the following syntax.
+
+```list_variable: []```
+
 ### Dictionaries
+
+Dictionaries in Ansible are key value pairs and can also be defined as variables and provide a mechanism for referencing data.
+
+Dictionary variables are defined with the curly braces ```{}```. An example of a dictionary variable being defined is shown below.
+
+```
+var_dict:
+  { item_key1: value1, item_key2: value2, item_key3: value3 }
+```
+
+A task using these can access the key name and the value by using the ```with_dict:``` module and the same technique as the list however using the **item.key** and **item.value** as shown in the example below.
+
+
+
+
 
 ### Jinja Templating
 
