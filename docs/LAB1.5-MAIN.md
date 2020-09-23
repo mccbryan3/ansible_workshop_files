@@ -35,6 +35,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 ![](/images/lab-1.5-play-out1.png)
 
-5. 
+5. Open the file again and add the highlighted portions from the graphic below.
 
+![](/images/lab-1.5-playdefine-vars-list.png)
 
