@@ -157,6 +157,18 @@ ok: [localhost] => (item={'key': 'item_key3', 'value': 'value3'}) => {
 
 A great way to learn to work with variable types is by exploring the Ansible facts using the **setup** module. Ansible facts are variables gathered from hosts during playbook execution if **gather_facts** is set to yes (the default). These are special variables used for accessing host information in Ansible to help make decisions using conditionals in Ansible playbooks. All of these facts are prefaced with **ansible_**.
 
+Facts can be accessed by walking the fact "tree" using the square brackets.
+
+Two examples of accessing ansible facts are shown below.
+
+The below returns all ipv4 addresses from the host.
+
+```"{{ ansible_facts['all_ipv4_addresses'] }}"```
+
+The below fact uses the date_time fact from the host and accesses the value of the vaaue of the iso8601 key from the date_time dictionary.
+
+```{{ ansible_facts['date_time']['iso8601'] }}```
+
 I encourage using the Ansible facts to help learn how to work with variables and explore different variable types.
 
 ### Jinja2 Templating
@@ -190,6 +202,10 @@ The list of Jinja filters is vast and could probably take a workshop in itself. 
 5. Complex loops. This example simply loops through the var_test2 variable and is similar to the with_items used above with lists however is much more useful in templating for configuration files.
 
 ```"{% for item in var_test2 %} {{ item }} {% endfor %}"```
+
+6. Use the below type_debug filter to get the data type of the variable.
+
+```{{ variable | type_debug }"```
 
 More on Jinja2 filters used in Ansible can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html)
 
