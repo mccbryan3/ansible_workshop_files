@@ -43,6 +43,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 6. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
 
 7. Run the playbook and verify output.
-
+<br>___Notice how the "Title" filter capatilizes the first letter in bryan.___
+![](/images/lab-1.5-playdefine-vars-list01.png)
 
 
