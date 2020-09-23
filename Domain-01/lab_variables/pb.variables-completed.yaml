@@ -25,7 +25,7 @@
     - name: Loop through the list
       debug:
         msg: "{{ item }}"
-      loop: "{{ list_vars }}"
+      with_items: "{{ list_vars }}"
 
     - name: Fill the template
       template:
@@ -39,4 +39,10 @@
     - name: Ansible Facts
       debug:
         msg: "{{ ansible_facts['default_ipv4'] }}"
-      tags: facts
+      when: ansible_facts['os_family'] == "Windows"
+
+    - name: Ansible Facts
+      debug:
+        msg: "{{ ansible_facts['default_ipv4'] }}"
+      when: ansible_facts['os_family'] == "RedHat"
+
