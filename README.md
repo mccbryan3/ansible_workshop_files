@@ -1,8 +1,6 @@
 # Ansible Workshop from Anywhere
 
-**This repo is currently a work in progress. I am working to port my workshop from a central student lecture (with pdfs) to a github repo based remote led instruction class using the students infrastructure .**
-
-**This repo will contain all files required for my Ansible Workshop including course lecture, terminology and lab manuals.**
+**This contains all files required for my Ansible Workshop including course lecture, terminology and lab manuals.**
 
 This workshop is also built to work as a self-paced workshop providing you meet the [Lab Requirements](/docs/LAB-MAIN.md).
 
