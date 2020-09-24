@@ -1,6 +1,6 @@
 # LAB 1.5 - Writing playbooks with variables and conditionals
 
-Write playbooks using variables and conditonals
+### Write playbooks using variables and conditonals
 
 Verify your working directory is Domain-01.
 
@@ -25,12 +25,12 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 ![](/images/lab-1.5-playdefine-vars.png)
 
-3. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+3. Check the playbook syntax running the --syntax-check with ansible-playbook.
 
 ```ansible-playbook pb.variables-01.yaml --syntax-check```
 
 4. Run the playbook
-      * The playbook should prompt for the variable ```user``` based on the vars_prompt playbook key word.
+      * The playbook should prompt for the variable ```user``` based on the vars_prompt playbook keyword.
 <br>___output shown below___
 
 ![](/images/lab-1.5-play-out1.png)
@@ -40,7 +40,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 ![](/images/lab-1.5-playdefine-vars-list.png)
 
-6. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+6. Check the playbook syntax running the --syntax-check with ansible-playbook.
 
 7. Run the playbook and verify output.
 <br>___Notice how the "Title" filter capatilizes the first letter in bryan.___
@@ -55,7 +55,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
  
 ![](/images/lab-template-task.png)
 
-10. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+10. Check the playbook syntax running the --syntax-check with ansible-playbook.
 
 11. Run the playbook and verify output.
 
@@ -63,12 +63,13 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 ```cat /home/ansible-user/template-test.txt```
 <br>___Notice how we used the for loop in Jinja to write the contents of the file based on Ansible variables.___
+<br>___This is super useful for providing variable data into configuration files or any file for that matter.___
 
 13. Add the below image contents to the pb.variables-<student>.yaml file at the bottom of the playbook.
  
  ![](/images/lab-facts-task.png)
  
-14. Check the Run the playbook syntax running the --syntax-check with ansible-playbook.
+14. Check the playbook syntax running the --syntax-check with ansible-playbook.
 
 15. Run the playbook and verify output.
  
