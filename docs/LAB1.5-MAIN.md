@@ -82,7 +82,7 @@ cd /home/ansible-user/ansible_workshop_files/Domain-01
 
 If you have issues with your playbook run diff on your playbook against the playbook in the lab_variables directory.
 
-diff lab_variables/pb.variables-01.yaml lab_variables/pb.variables-completed.yaml
+diff pb.variables-01.yaml lab_variables/pb.variables-completed.yaml
 
 [Return to Main](/README.md)
 
