@@ -3,7 +3,6 @@
 **This repo contains all files required for my Ansible Workshop including course lecture, terminology and lab manuals.**
 
 This workshop is also built to work as a self-paced workshop providing you meet the [Lab Requirements](/docs/LAB-MAIN.md).
-
 _____________________________________________
 ### Preface and Basics-101
 [Ansible Workshop Summary Main](/docs/WORKSHOP-MAIN.md#ansible-workshop--ansible-basics) - **Workshop information**<br>
