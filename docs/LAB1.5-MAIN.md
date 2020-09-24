@@ -84,6 +84,8 @@ If you have issues with your playbook run diff on your playbook against the play
 
 diff pb.variables-01.yaml lab_variables/pb.variables-completed.yaml
 
+**End of Lab 1.5**
+
 [Return to Main](/README.md)
 
 
