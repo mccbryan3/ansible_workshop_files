@@ -4,9 +4,21 @@
 
 As with any "scripting language" variables and working with variable is essential. Variables are used to asssign dynamic and transient data during the execution of your plays  and playbooks. 
 
-It has already been discussed in the previous lectures how variable placement can determine the data that the variables hold based on.
+It has already been discussed in the previous lectures how variable placement can determine the data that the variables hold.
 
 Play based variables are usually assigned at the beginning of the play using the ```vars``` or ```vars_files``` or perhaps even the ```vars_prompt``` tags.
+
+File based variables are also play based variables as they are assigned at the play definition using the ```vars_files:``` definition as below.
+
+In the below example the ```vars_files``` defintion is used with a file specified using the relaitive path of the playbook execution directory.
+
+```
+- name: Some play using variables
+  hosts: all
+  vars_files:
+    vars/vars-file.yaml
+```
+We used this similar approach in previous lectures and labs using the implied vars files for group_vars.
 
 Variables in Ansible must begin with a letter and should only contain letters numbers and underscores. 
 
@@ -33,6 +45,8 @@ These variables can also be provided during the playbooik execution using the ``
 
 Variable precendence order is listed below with the higher number listed overwriting any previous variables that are defined.
 
+The higher the number the higher the precedence.
+
 1. Configuration settings
 2. Command-line options
     * used primarily for become, user etc and not related to extra-vars
@@ -55,7 +69,7 @@ Due to variable precedence it is a good practice to develop a method for providi
         sample_var1: replace_content
 ```
 
-In the play above the variable ```sample_var1``` has defined at the play as a play keyword and then subsequently overwritten at  the task level.
+In the play above the variable ```sample_var1``` has been defined at the play as a play keyword and then subsequently overwritten at the task level.
 
 Running the playbook will yield the following output.
 
@@ -66,11 +80,11 @@ ok: [localhost] => {
 }
 ```
 
-Even further you could replace this variables at the command line with the 
+Even further, you could replace this variables at the command line with the following use of the extra-vars parameter.
 
 ```ansible-playbook overwritten-vars.yaml -e "sample_var1=overwrtten_content"```
 
-Which will yield the output.
+Which will yield the output below.
 
 ```
 TASK [debug] *************************************
@@ -81,9 +95,9 @@ ok: [localhost] => {
 
 ### Lists
 
-Variables can contain lists of items sometimes called arrays in other languages.
+Variables may contain lists of items sometimes referred to as arrays in other languages.
 
-Lists are defined simply by provided by providing each **item** in the list under the variable prefixed with the dash and a space.
+Lists are defined simply by provided by each **item** in the list under the variable prefixed with the dash and a space.
 
 ```
   var_test2:
@@ -101,7 +115,7 @@ Lists can be used in many ways in Ansible with the primary purpose of looping th
     with_items: "{{ var_test2 }}"
 ```
 
-It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided will is shown below. As you can see in the Ansible playbook output the "{{ item }}" simply becomes each variable in the list as shown with the **item=item1** output.
+It is worth noting that the ```"{{ item }}"``` assumes the default variable status of each item in the list. The output of the above task with the list provided is shown below. As you can see in the Ansible playbook output the "{{ item }}" simply becomes each variable in the list as shown with the **item=item1** output.
 
 ```
 TASK [Looping through list variable] ***********************************
@@ -122,7 +136,7 @@ Defining an empty list can be done using the following syntax.
 
 ### Dictionaries
 
-Dictionaries in Ansible are key value pairs and can also be defined as variables and provide a mechanism for referencing data.
+Dictionaries in Ansible are key value pairs sometmes referred to as hashtables in other languages . Dirctionaries can also be defined as variables and provide a mechanism for referencing data.
 
 Dictionary variables are defined with the curly braces ```{}```. An example of a dictionary variable being defined is shown below.
 
@@ -131,7 +145,7 @@ var_dict:
   { item_key1: value1, item_key2: value2, item_key3: value3 }
 ```
 
-A task using these can access the key name and the value by using the ```with_dict:``` module and the same technique as the list however using the **item.key** and **item.value** as shown in the example below.
+A task using these can access the key name and the value by using the ```with_dict:``` module and the same technique as the list using the **item.key** and **item.value** as shown in the example below.
 
 ```
   - name: Dictionary variables
@@ -207,11 +221,15 @@ The list of Jinja filters is vast and could probably take a workshop in itself. 
 
 ```{{ variable | type_debug }"```
 
+7. Casting variabels into a certain data type.
+
+```{{ variable | bool }}```
+
 More on Jinja2 filters used in Ansible can be found [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html)
 
 ### Conditionals and Register
 
-Playbook conditionals are used to make decisions in plays and on tasks. All conditionals rely on ansible facts or variables when making decsisions and ultimately control the flow of your plays and playbooks.
+Playbook conditionals are used to make decisions in plays and on tasks. All conditionals rely on ansible facts or variables when making decisions and ultimately control the flow of your plays and playbooks.
 
 When executing tasks you can set the result of that task to a variable on the end of the task usng the **register** module.
 
@@ -219,7 +237,7 @@ This allows you to make further decisions in your play on the contents of that t
 
 Example of the using register with a task and taking the stdout of the command module and displaying the output.
 
-The variable ```where_is_password``` is filled by the shell module using the ```group -R password .``` command which looks in all files in the current directory recursively and captures all of the output. The command module is a dictionary output by default with the standard output stored in the stdout key. We access the value of the key with the ```.``` as used similar to object oriented languages as properties.
+The variable ```where_is_password``` is filled by the shell module using the ```group -R password .``` command which looks in all files in the current directory recursively and captures all of the output. The command module is a dictionary output by default with the standard output stored in the stdout key. We access the value of the key with the ```.``` as used similar to object oriented languages access of properties.
 
 ```
   - name: Find all files with the word password in the current directory
@@ -242,7 +260,7 @@ Using the Ansible facts with the ```when:``` conditional allows you to provide m
 Notice that **when using the conditionals the braces are not used with the variables.**
 
 ```
-  - name: Say hello when the OS is windows or CentOS greater than 6
+  - name: Say hello when the OS is CentOS greater than 7
     shell: echo "Hello There!!!"
     when: ansible_facts['os_family'] == "RedHat" and (ansible_facts['distribution_major_version'] | int > 7 ) 
     register: hello_there
@@ -253,9 +271,9 @@ Notice that **when using the conditionals the braces are not used with the varia
     when: hello_there.stdout != ""
 ```
 
-The above snippet contains two tasks and two conditionals. There first only runs the command ```echo "Hello There!!!"``` if the os_family is RedHat and the version is above 7.
+The above snippet contains two tasks and two conditionals. There first only runs the command ```echo "Hello There!!!"``` if the os_family is RedHat and the major version is above 7.
 
-There is also a Jinja filter in this case "casting" the ```ansible_facts['distribution_major_version']``` into integer data type and comparing it as greater than the number 7.
+There is also a Jinja filter in this case "casting" the ```ansible_facts['distribution_major_version']``` into integer data type and comparing it as greater than the number/integer 7.
 
 There is also a return to the standard out check of the command module before calling the debug module.
 
